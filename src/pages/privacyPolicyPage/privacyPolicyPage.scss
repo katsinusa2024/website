@@ -1,0 +1,28 @@
+.privacyPolicyPage{
+  background-image: url("../../assets/images/jobsBg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: var(--color-white);
+
+  a{
+    color: var(--color-red);
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+  .location-link, .phone-link, .email-link{
+    display: flex;
+    align-items: flex-end;
+    color: var(--color-white);
+    margin-bottom: 10px;
+    span{
+      display: flex;
+    }
+    img{
+      width: 24px;
+      height: 24px;
+      margin-right: 5px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.termsOfServicesPage{
+  background-image: url("../../assets/images/jobsBg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: var(--color-white);
+
+  a{
+    color: var(--color-red);
+  }
+  .list{
+    margin-top: 10px;
+    list-style-type: lower-alpha;
+    li{
+      margin-bottom: 5px;
+      &:last-child{
+        margin: 0;
+      }
+    }
+  }
+}

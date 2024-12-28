@@ -1,0 +1,76 @@
+.cuisineSlider{
+  background: var(--background-black);
+  padding-top: 70px;
+  padding-bottom: 70px;
+  position: relative;
+  &.gallerySlider{
+    padding-top: 30px;
+  }
+  .sectionLabel{
+    font-size: 20px;
+    text-align: center;
+    color: var(--color-white);
+  }
+  @media(max-width: 991px){
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 600px;
+    @media(max-width: 991px){
+      height: 500px;
+    }
+    .swiper-button-next, .swiper-button-prev{
+
+      &:after{
+        color: var(--color-white);
+        transition: all 150ms ease-in-out;
+      }
+      &:hover{
+        &:after{
+          color: var(--color-bras);
+        }
+      }
+    }
+    .slider-button{
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      z-index: 2;
+      background: rgba(0,0,0,.4);
+      padding: 8px 15px;
+      transform: translateX(-50%);
+    }
+    .gradient{
+      background: radial-gradient(transparent 50%, black);
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-shadow: inset 0 0 10px 10px var(--color-black);
+    }
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    span{
+      display: block !important;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

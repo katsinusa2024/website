@@ -1,0 +1,66 @@
+$reservation-bg: url('../../assets/images/reservationBg.png') no-repeat center center;
+$reservation-bg-size: cover;
+$reservation-primary-color: #ffffff;
+$reservation-accent-color: #ff5722;
+
+.reservationPage{
+  padding-top: 90px;
+  padding-bottom: 0;
+  @media(max-width: 991px){
+    padding-top: 70px;
+  }
+  .reservation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: $reservation-bg;
+    background-size: $reservation-bg-size;
+    position: relative;
+    z-index: 1;
+    &:after{
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: rgba(0,0,0, .5);
+      z-index: -1;
+
+    }
+
+    .reservation-content {
+      text-align: center;
+      //background: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 10px;
+      //box-shadow: 0 4px 15px 10px rgba(0, 0, 0, 0.5);
+
+      .reservation-title {
+        font-size: 3rem;
+        color: $reservation-primary-color;
+        margin-bottom: 1rem;
+      }
+
+      .reservation-text {
+        font-size: 1.5rem;
+        color: $reservation-primary-color;
+        margin-bottom: 2rem;
+      }
+
+      .reservation-button {
+        padding: 0.8rem 2rem;
+        font-size: 1.2rem;
+        color: $reservation-primary-color;
+        background-color: $reservation-accent-color;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: darken($reservation-accent-color, 10%);
+        }
+      }
+    }
+  }
+}
