@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router';
+import { Route, Routes, useLocation } from 'react-router';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './global.scss';
 import HomePage from './pages/homePage';
@@ -21,53 +21,72 @@ import EventsPage from './pages/eventsPage';
 import ParkingPage from './pages/parkingPage';
 import DressCodePage from './pages/dressCodePage';
 import ReservationPage from './pages/resrevationPage';
-import { useLocation } from 'react-router-dom';
 import { initGA4, trackPageView } from './utils/ga4/ga4-analytics';
-// import CookieConsent from 'react-cookie-consent';
-
-// import BrunchMenuPage from "./pages/brunchMenuPage";
+import { headerData } from './components/dynamicHeader/routes';
+import DynamicHeader from './components/dynamicHeader';
+import useGDPRFacebookPixel from './utils/metaPixel/gdprFacebookPixel';
+import FacebookPixelSetup from './utils/metaPixel/facebookPixelSteup';
+import Button from './components/button';
 
 function App() {
   const location = useLocation();
   const [showSideBar, setShowSideBar] = useState(false);
   const [sideRef, setSideRef] = useState();
+  const { consentGranted, grantConsent } = useGDPRFacebookPixel('1393362078221567');
+
+  const normalizedPath = location.pathname.replace(/\/$/, '').split('?')[0];
+  const currentRouteData = headerData[normalizedPath] || {
+    title: 'Katsin',
+    metaTags: [{ name: 'description', content: 'Default description' }],
+    eventScripts: [],
+  };
 
   useEffect(() => {
-    // Initialize GA4 tracking
-    initGA4();
+    initGA4(); // Initialize GA4 globally
+  }, []);
 
-    // Track the initial pageview
-    trackPageView(location.pathname);
+  useEffect(() => {
+    trackPageView(location.pathname); // Track page views on route changes
   }, [location]);
 
   return (
     <div className="App">
+      <FacebookPixelSetup />
       <ScrollToTop />
       <Header showSideBar={showSideBar} setShowSideBar={setShowSideBar} />
       <Sidebar showSideBar={showSideBar} setShowSideBar={setShowSideBar} setSideRef={setSideRef} />
+      <DynamicHeader
+        title={currentRouteData.title}
+        metaTags={currentRouteData.metaTags}
+        eventScripts={currentRouteData.eventScripts}
+      />
       <Routes>
-        <Route path={'/'} element={<HomePage sideRef={sideRef} />} />
-        <Route path={'/welcome'} element={<WelcomePage />} />
-        <Route path={'/menu'} element={<FoodMenuPage />} />
-        {/*<Route path={'/brunch'} element={<BrunchMenuPage />} />*/}
-        <Route path={'/bar'} element={<DrinkMenuPage />} />
-        <Route path={'/events'} element={<EventsPage />} />
-        <Route path={'/cards'} element={<GiftCardPage />} />
-        <Route path={'/vip'} element={<VipRoomPage />} />
-        <Route path={'/dress-code'} element={<DressCodePage />} />
-        <Route path={'/parking'} element={<ParkingPage />} />
-        <Route path={'/reservation'} element={<ReservationPage />} />
-
-        <Route path={'/jobs'} element={<JobsPage />} />
-        <Route path={'/privacy-policy'} element={<PrivacyPolicyPage />} />
-        <Route path={'/terms-of-services'} element={<TermsOfServicesPage />} />
-        <Route path={'/accessibility'} element={<AccessibilityPage />} />
+        <Route path="/" element={<HomePage sideRef={sideRef} />} />
+        <Route path="/welcome" element={<WelcomePage />} />
+        <Route path="/menu" element={<FoodMenuPage />} />
+        <Route path="/bar" element={<DrinkMenuPage />} />
+        <Route path="/events" element={<EventsPage />} />
+        <Route path="/cards" element={<GiftCardPage />} />
+        <Route path="/vip" element={<VipRoomPage />} />
+        <Route path="/dress-code" element={<DressCodePage />} />
+        <Route path="/parking" element={<ParkingPage />} />
+        <Route path="/reservation" element={<ReservationPage />} />
+        <Route path="/jobs" element={<JobsPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="/terms-of-services" element={<TermsOfServicesPage />} />
+        <Route path="/accessibility" element={<AccessibilityPage />} />
       </Routes>
       <Socials />
       <Footer />
-      {/*<div className="cookies">*/}
-      {/*  <CookieConsent>This website uses cookies to enhance user experience.</CookieConsent>*/}
-      {/*</div>*/}
+      {!consentGranted && (
+        <div className="cookie-banner">
+          <p>
+            We use cookies to enhance your experience. By clicking "Accept", you consent to
+            tracking.
+          </p>
+          <Button onClick={grantConsent}>Accept cookies</Button>
+        </div>
+      )}
     </div>
   );
 }
