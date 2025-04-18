@@ -27,11 +27,14 @@ import DynamicHeader from './components/dynamicHeader';
 import useGDPRFacebookPixel from './utils/metaPixel/gdprFacebookPixel';
 import FacebookPixelSetup from './utils/metaPixel/facebookPixelSteup';
 import Button from './components/button';
+import EventModal from './components/eventModal';
+import { MODAL_INTERVAL_MS } from './components/eventModal/eventModal';
 
 function App() {
   const location = useLocation();
   const [showSideBar, setShowSideBar] = useState(false);
   const [sideRef, setSideRef] = useState();
+  const [showModalIcon, setShowModalIcon] = useState(false);
   const { consentGranted, grantConsent } = useGDPRFacebookPixel('1393362078221567');
 
   const normalizedPath = location.pathname.replace(/\/$/, '').split('?')[0];
@@ -49,11 +52,24 @@ function App() {
     trackPageView(location.pathname); // Track page views on route changes
   }, [location]);
 
+  useEffect(() => {
+    const lastClosed = parseInt(localStorage.getItem('lastModalClosedAt'), 10);
+    const now = Date.now();
+    if (!isNaN(lastClosed) && now - lastClosed < MODAL_INTERVAL_MS) {
+      setShowModalIcon(true);
+    }
+  }, []);
+
   return (
     <div className="App">
+      <EventModal onClose={() => setShowModalIcon(true)} />
       <FacebookPixelSetup />
       <ScrollToTop />
-      <Header showSideBar={showSideBar} setShowSideBar={setShowSideBar} />
+      <Header
+        showSideBar={showSideBar}
+        setShowSideBar={setShowSideBar}
+        showModalIcon={showModalIcon}
+      />
       <Sidebar showSideBar={showSideBar} setShowSideBar={setShowSideBar} setSideRef={setSideRef} />
       <DynamicHeader
         title={currentRouteData.title}
