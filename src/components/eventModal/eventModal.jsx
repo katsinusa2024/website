@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './eventModal.scss';
 import { NavLink } from 'react-router-dom';
 
-export const MODAL_INTERVAL_MS = 0.01 * 60 * 1000;
+export const MODAL_INTERVAL_MS = 1 * 60 * 1000;
 
 const EventModal = ({ onClose }) => {
   const [showModal, setShowModal] = useState(false);
