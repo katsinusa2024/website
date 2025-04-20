@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import './eventModal.scss';
 import { NavLink } from 'react-router-dom';
+import { eventsMock } from '../../pages/eventsPage/eventsMock';
 
-export const MODAL_INTERVAL_MS = 1 * 60 * 1000;
+export const MODAL_INTERVAL_MS = 0.01 * 60 * 1000;
 
 const EventModal = ({ onClose }) => {
   const [showModal, setShowModal] = useState(false);
+  const [event, setEvent] = useState(null);
 
   useEffect(() => {
     const lastClosed = parseInt(localStorage.getItem('lastModalClosedAt'), 10);
     const now = Date.now();
 
     if (isNaN(lastClosed) || now - lastClosed > MODAL_INTERVAL_MS) {
-      setShowModal(true);
+      const nextEvent = getNextUpcomingEvent();
+      if (nextEvent) {
+        setEvent(nextEvent);
+        setShowModal(true);
+      }
     }
   }, []);
 
@@ -40,6 +46,22 @@ const EventModal = ({ onClose }) => {
     if (onClose) onClose(); // tell App.js to show the icon
   };
 
+  const getNextUpcomingEvent = () => {
+    const now = new Date();
+
+    const sortedEvents = eventsMock
+      .map(event => {
+        const eventDate = new Date(`${event.date.month} ${event.date.day}, ${event.date.year}`);
+        return { ...event, eventDate };
+      })
+      .filter(event => event.eventDate >= now)
+      .sort((a, b) => a.eventDate - b.eventDate);
+
+    return sortedEvents[0]; // Returns the next upcoming event
+  };
+
+  if (!event) return null;
+
   return (
     <>
       {showModal && (
@@ -50,14 +72,8 @@ const EventModal = ({ onClose }) => {
             </button>
             <div className="event-content">
               <h1>An Evening You Won’t Want to Miss!</h1>
-              <h1>Paris Chansons</h1>
-              <p className="subtitle">
-                A Beautiful Journey Through <span>French Music</span>
-              </p>
-              <p className="artists">
-                Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — <br />
-                plus beloved Italian and Russian gypsy classics.
-              </p>
+              <h1>{event.title}</h1>
+              <p className="artists">{event.description}</p>
               <div className="katsin-logo">
                 at <strong>Katsin</strong> Restaurant & Dining Bar
               </div>
