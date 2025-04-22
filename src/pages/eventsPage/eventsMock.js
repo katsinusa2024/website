@@ -22,7 +22,7 @@ const eventsMock = [
     id: uuid(),
     title: 'Henris Way Presents',
     description: 'The Gumbo Brothers featuring Apollo Jai. Good Vibes With a Beat you Can Feel',
-    date: { day: '05', month: 'May', year: '2025' },
+    date: { day: '01', month: 'May', year: '2025' },
     imgUrl: events2,
     isRecurring: false,
   },
