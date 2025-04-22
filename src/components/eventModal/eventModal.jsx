@@ -3,7 +3,7 @@ import './eventModal.scss';
 import { NavLink } from 'react-router-dom';
 import { upcomingEventsMock } from '../../pages/eventsPage/eventsMock';
 
-export const MODAL_INTERVAL_MS = 0.01 * 60 * 1000;
+export const MODAL_INTERVAL_MS = 0.05 * 60 * 1000;
 
 const EventModal = ({ onClose }) => {
   const [showModal, setShowModal] = useState(false);
@@ -46,57 +46,101 @@ const EventModal = ({ onClose }) => {
     if (onClose) onClose(); // tell App.js to show the icon
   };
 
+  // const getNextUpcomingEvent = () => {
+  //   const now = new Date();
+  //
+  //   // Normalize eventDate
+  //   const events = upcomingEventsMock.map(event => {
+  //     const eventDate =
+  //       event.eventDate || new Date(`${event.date.month} ${event.date.day}, ${event.date.year}`);
+  //     return { ...event, eventDate };
+  //   });
+  //
+  //   // Only include events in the future
+  //   const futureEvents = events.filter(e => e.eventDate >= now);
+  //
+  //   // Sort by date ascending
+  //   const sorted = futureEvents.sort((a, b) => a.eventDate - b.eventDate);
+  //
+  //   // Group events by date string
+  //   const groupedByDate = sorted.reduce((acc, event) => {
+  //     const key = event.eventDate.toDateString();
+  //     if (!acc[key]) acc[key] = [];
+  //     acc[key].push(event);
+  //     return acc;
+  //   }, {});
+  //
+  //   const sortedDates = Object.keys(groupedByDate)
+  //     .map(dateStr => new Date(dateStr))
+  //     .sort((a, b) => a - b);
+  //
+  //   for (const date of sortedDates) {
+  //     const eventsOnDate = groupedByDate[date.toDateString()];
+  //     const dayOfWeek = date.getDay(); // 0 = Sunday, 6 = Saturday
+  //
+  //     const nonRecurring = eventsOnDate.filter(e => !e.isRecurring);
+  //     const recurring = eventsOnDate.filter(e => e.isRecurring);
+  //
+  //     // ✅ If it's Fri/Sat/Sun and has non-recurring event — show that one
+  //     if ([5, 6, 0].includes(dayOfWeek) && nonRecurring.length > 0) {
+  //       return nonRecurring[0];
+  //     }
+  //
+  //     // ✅ If it's Fri/Sat/Sun and no non-recurring — show recurring
+  //     if ([5, 6, 0].includes(dayOfWeek) && recurring.length > 0) {
+  //       return recurring[0];
+  //     }
+  //
+  //     // ✅ If it's Mon–Thu but there is a non-recurring event — allow it
+  //     if (![5, 6, 0].includes(dayOfWeek) && nonRecurring.length > 0) {
+  //       return nonRecurring[0];
+  //     }
+  //
+  //     // ❌ Skip other cases
+  //   }
+  //
+  //   return null;
+  // };
+
   const getNextUpcomingEvent = () => {
     const now = new Date();
+    const currentMonth = now.getMonth();
+    const currentYear = now.getFullYear();
+    const today = now.getDay(); // 0 = Sun, ..., 6 = Sat
 
-    // Normalize eventDate
-    const events = upcomingEventsMock.map(event => {
-      const eventDate =
-        event.eventDate || new Date(`${event.date.month} ${event.date.day}, ${event.date.year}`);
-      return { ...event, eventDate };
+    // STEP 1: Separate events
+    const tyom = upcomingEventsMock.find(e => e.title.toLowerCase() === 'tyom');
+    const marjana = upcomingEventsMock.find(e => e.title.toLowerCase() === 'marjana');
+    const nonRecurring = upcomingEventsMock
+      .filter(e => !e.isRecurring && e.date?.day && e.date?.month && e.date?.year)
+      .map(e => ({
+        ...e,
+        eventDate: new Date(`${e.date.month} ${e.date.day}, ${e.date.year}`),
+      }))
+      .filter(e => e.eventDate >= now)
+      .sort((a, b) => a.eventDate - b.eventDate);
+
+    // STEP 2: Check if any non-recurring events exist this month
+    const hasEventThisMonth = nonRecurring.some(e => {
+      const d = e.eventDate;
+      return d.getMonth() === currentMonth && d.getFullYear() === currentYear;
     });
 
-    // Only include events in the future
-    const futureEvents = events.filter(e => e.eventDate >= now);
+    // STEP 3: Priority order
+    // → First valid upcoming non-recurring event
+    if (nonRecurring.length > 0) {
+      return nonRecurring[0];
+    }
 
-    // Sort by date ascending
-    const sorted = futureEvents.sort((a, b) => a.eventDate - b.eventDate);
-
-    // Group events by date string
-    const groupedByDate = sorted.reduce((acc, event) => {
-      const key = event.eventDate.toDateString();
-      if (!acc[key]) acc[key] = [];
-      acc[key].push(event);
-      return acc;
-    }, {});
-
-    const sortedDates = Object.keys(groupedByDate)
-      .map(dateStr => new Date(dateStr))
-      .sort((a, b) => a - b);
-
-    for (const date of sortedDates) {
-      const eventsOnDate = groupedByDate[date.toDateString()];
-      const dayOfWeek = date.getDay(); // 0 = Sunday, 6 = Saturday
-
-      const nonRecurring = eventsOnDate.filter(e => !e.isRecurring);
-      const recurring = eventsOnDate.filter(e => e.isRecurring);
-
-      // ✅ If it's Fri/Sat/Sun and has non-recurring event — show that one
-      if ([5, 6, 0].includes(dayOfWeek) && nonRecurring.length > 0) {
-        return nonRecurring[0];
+    // → If no event this month, fallback logic
+    if (!hasEventThisMonth) {
+      if ([5, 6, 0].includes(today)) {
+        // Fri/Sat/Sun
+        return tyom || null;
+      } else {
+        // Mon–Thu
+        return marjana || null;
       }
-
-      // ✅ If it's Fri/Sat/Sun and no non-recurring — show recurring
-      if ([5, 6, 0].includes(dayOfWeek) && recurring.length > 0) {
-        return recurring[0];
-      }
-
-      // ✅ If it's Mon–Thu but there is a non-recurring event — allow it
-      if (![5, 6, 0].includes(dayOfWeek) && nonRecurring.length > 0) {
-        return nonRecurring[0];
-      }
-
-      // ❌ Skip other cases
     }
 
     return null;

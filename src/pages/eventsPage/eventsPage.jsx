@@ -1,7 +1,5 @@
 import React from 'react';
 import './eventsPage.scss';
-import event1 from '../../assets/images/events/setmenu125$.JPG';
-import event2 from '../../assets/images/events/setmenu150$.JPG';
 import Button from '../../components/button';
 import { pastEventsMock, upcomingEventsMock } from './eventsMock';
 
@@ -21,7 +19,7 @@ const EventsPage = () => {
             {item.isRecurring ? 'Every' : item.date.month}
           </div>
           <div className={`date-of-month ${item.isRecurring ? 'isRecurring' : ''}`}>
-            {item.isRecurring ? 'Fri - Sun' : item.date.day}
+            {item.isRecurring ? (item.title === 'MARJANA' ? 'DAY' : 'Fri - Sun') : item.date.day}
           </div>
         </div>
       </div>
@@ -58,10 +56,6 @@ const EventsPage = () => {
         )}
 
         {pastEventsMock.length > 0 && <>{pastEventsMock.map(renderEvent)}</>}
-
-        <h1 className="mb-5 text-uppercase event-name">Event Menu</h1>
-        <img src={event1} alt="Menu $125" className="img-fluid mb-5" />
-        <img src={event2} alt="Menu $150" className="img-fluid" />
       </div>
     </div>
   );

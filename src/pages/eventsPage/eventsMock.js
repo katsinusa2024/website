@@ -1,9 +1,12 @@
+import { v4 as uuid } from 'uuid';
+
 import events1 from '../../assets/images/events/events1.jpg';
 import events2 from '../../assets/images/events/events2.jpeg';
 import events3 from '../../assets/images/events/events3.png';
 import events4 from '../../assets/images/events/events4.JPG';
 import eventt from '../../assets/images/events/eventt.JPG';
-import { v4 as uuid } from 'uuid';
+import eventAll from '../../assets/images/events/eventAll.JPG';
+import events5 from '../../assets/images/events/events5.JPG';
 
 const now = new Date();
 
@@ -50,6 +53,22 @@ const eventsMock = [
     imgUrl: eventt,
     isRecurring: true,
   },
+  {
+    id: uuid(),
+    title: 'Moelle',
+    description: "Mother's Day with Moelle",
+    date: { day: '11', month: 'May', year: '2025' },
+    imgUrl: events5,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'MARJANA',
+    description: 'WITH HER BEST LIVE ENTERTAINING PROGRAM',
+    date: {}, // not needed for template
+    imgUrl: eventAll,
+    isRecurring: true,
+  },
 ];
 
 const formatDateString = ({ day, month, year }) => {
@@ -58,7 +77,7 @@ const formatDateString = ({ day, month, year }) => {
 };
 
 // 🔹 Separate Recurring Event Template
-const recurringTemplate = eventsMock.find(e => e.isRecurring);
+const recurringTemplates = eventsMock.filter(e => e.isRecurring);
 
 // 🔹 Process only non-recurring events
 const nonRecurringEvents = eventsMock
@@ -82,8 +101,6 @@ const past = nonRecurringEvents
   .sort((a, b) => b.eventDate - a.eventDate);
 
 // 🔹 Final exports
-export const upcomingEventsMock = recurringTemplate
-  ? [recurringTemplate, ...upcoming]
-  : [...upcoming];
+export const upcomingEventsMock = [...recurringTemplates, ...upcoming];
 
 export const pastEventsMock = [...past];

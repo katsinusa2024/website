@@ -18,6 +18,7 @@ import AccessibilityPage from './pages/accessibilityPage';
 import VipRoomPage from './pages/vipRoomPage';
 import GiftCardPage from './pages/giftCardPage';
 import EventsPage from './pages/eventsPage';
+import SetMenuPage from './pages/setMenuPage';
 import ParkingPage from './pages/parkingPage';
 import DressCodePage from './pages/dressCodePage';
 import ReservationPage from './pages/resrevationPage';
@@ -95,6 +96,7 @@ function App() {
         <Route path="/menu" element={<FoodMenuPage />} />
         <Route path="/bar" element={<DrinkMenuPage />} />
         <Route path="/events" element={<EventsPage />} />
+        <Route path="/set-menu" element={<SetMenuPage />} />
         <Route path="/cards" element={<GiftCardPage />} />
         <Route path="/vip" element={<VipRoomPage />} />
         <Route path="/dress-code" element={<DressCodePage />} />
