@@ -19,7 +19,11 @@ const EventsPage = () => {
             {item.isRecurring ? 'Every' : item.date.month}
           </div>
           <div className={`date-of-month ${item.isRecurring ? 'isRecurring' : ''}`}>
-            {item.isRecurring ? (item.title === 'MARJANA' ? 'DAY' : 'Fri - Sun') : item.date.day}
+            {item.isRecurring
+              ? item.title === 'MARJANA'
+                ? 'Thu-Sun'
+                : 'Fri - Sun'
+              : item.date.day}
           </div>
         </div>
       </div>

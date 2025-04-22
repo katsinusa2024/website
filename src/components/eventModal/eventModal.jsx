@@ -3,7 +3,7 @@ import './eventModal.scss';
 import { NavLink } from 'react-router-dom';
 import { upcomingEventsMock } from '../../pages/eventsPage/eventsMock';
 
-export const MODAL_INTERVAL_MS = 1 * 60 * 1000;
+export const MODAL_INTERVAL_MS = 2 * 60 * 1000;
 
 const EventModal = ({ onClose }) => {
   const [showModal, setShowModal] = useState(false);
