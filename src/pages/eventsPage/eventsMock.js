@@ -3,10 +3,10 @@ import { v4 as uuid } from 'uuid';
 import events1 from '../../assets/images/events/events1.jpg';
 import events2 from '../../assets/images/events/events2.jpeg';
 import events3 from '../../assets/images/events/events3.png';
-import events4 from '../../assets/images/events/events4.JPG';
-import eventt from '../../assets/images/events/eventt.JPG';
-import eventAll from '../../assets/images/events/eventAll.JPG';
-import events5 from '../../assets/images/events/events5.JPG';
+import events4 from '../../assets/images/events/events4.jpg';
+import eventt from '../../assets/images/events/eventt.jpg';
+import eventAll from '../../assets/images/events/eventAll.jpg';
+import events5 from '../../assets/images/events/events5.jpg';
 
 const now = new Date();
 
