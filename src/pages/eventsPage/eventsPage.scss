@@ -10,25 +10,34 @@
     display: flex;
   }
   .event-container{
-    background-color: #333333;
+    background-color: black;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
     display: flex;
     justify-content: space-between;
     .event-date{
       text-align: center;
-      min-width: 40px;
+      min-width: 50px;
       border-radius: 0.16667rem;
       box-shadow: 0 0.11111rem 0.22222rem 0 transparent;
       overflow: hidden;
-      max-width: 45px;
+      max-width: 55px;
+      @media (max-width: 767px) {
+        min-width: 40px;
+      }
       .name-of-month{
         font-size: 14px;
         background-color: #111;
         color: #a6742a;
         padding: 0.16667rem 0.27778rem;
-        font-family: 'arial', sans-serif;
+        text-transform: uppercase;
+        &.isRecurring{
+          font-size: 13px;
+        }
       }
       .date-of-month{
         font-size: 22px;
@@ -36,7 +45,9 @@
         color: #333;
         padding: 0.11111rem 0.27778rem 0.16667rem;
         line-height: 1;
-        font-family: 'arial', sans-serif;
+        &.isRecurring{
+          font-size: 16px;
+        }
       }
     }
     .event-img{

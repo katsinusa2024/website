@@ -60,6 +60,19 @@ function App() {
     }
   }, []);
 
+  useEffect(() => {
+    const userConsented = localStorage.getItem('facebookPixelConsent') === 'true';
+
+    if (userConsented && !consentGranted) {
+      grantConsent();
+    }
+  }, [consentGranted, grantConsent]);
+
+  const handleAcceptCookies = () => {
+    grantConsent();
+    localStorage.setItem('facebookPixelConsent', 'true');
+  };
+
   return (
     <div className="App">
       <EventModal onClose={() => setShowModalIcon(true)} />
@@ -100,7 +113,7 @@ function App() {
             We use cookies to enhance your experience. By clicking "Accept", you consent to
             tracking.
           </p>
-          <Button onClick={grantConsent}>Accept cookies</Button>
+          <Button onClick={handleAcceptCookies}>Accept cookies</Button>
         </div>
       )}
     </div>
