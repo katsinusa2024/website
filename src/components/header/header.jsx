@@ -6,10 +6,12 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import logo from '../../assets/katsin-logo-black.png';
 import location from '../../assets/icons/location.png';
 import phone from '../../assets/icons/call.png';
+import event from '../../assets/icons/event.png';
 import { useNavigate } from 'react-router';
 import { useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-const Header = ({ showSideBar, setShowSideBar }) => {
+const Header = ({ showSideBar, setShowSideBar, showModalIcon }) => {
   const navigate = useNavigate();
   const loc = useLocation();
   const handleClick = () => {
@@ -47,6 +49,15 @@ const Header = ({ showSideBar, setShowSideBar }) => {
         <img src={phone} alt="img" />
         <span>+1 (818) 869 - 3030</span>
       </a>
+      {showModalIcon && (
+        <NavLink to="/events">
+          <div className="event-icon">
+            <span className="rise-shake">
+              <img src={event} alt="img" />
+            </span>
+          </div>
+        </NavLink>
+      )}
       <Button
         onClick={handleClick}
         className={`white ${loc.pathname.includes('events') ? 'inevents' : ''}`}

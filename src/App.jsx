@@ -18,6 +18,7 @@ import AccessibilityPage from './pages/accessibilityPage';
 import VipRoomPage from './pages/vipRoomPage';
 import GiftCardPage from './pages/giftCardPage';
 import EventsPage from './pages/eventsPage';
+import SetMenuPage from './pages/setMenuPage';
 import ParkingPage from './pages/parkingPage';
 import DressCodePage from './pages/dressCodePage';
 import ReservationPage from './pages/resrevationPage';
@@ -27,11 +28,14 @@ import DynamicHeader from './components/dynamicHeader';
 import useGDPRFacebookPixel from './utils/metaPixel/gdprFacebookPixel';
 import FacebookPixelSetup from './utils/metaPixel/facebookPixelSteup';
 import Button from './components/button';
+import EventModal from './components/eventModal';
+import { MODAL_INTERVAL_MS } from './components/eventModal/eventModal';
 
 function App() {
   const location = useLocation();
   const [showSideBar, setShowSideBar] = useState(false);
   const [sideRef, setSideRef] = useState();
+  const [showModalIcon, setShowModalIcon] = useState(false);
   const { consentGranted, grantConsent } = useGDPRFacebookPixel('1393362078221567');
 
   const normalizedPath = location.pathname.replace(/\/$/, '').split('?')[0];
@@ -49,11 +53,37 @@ function App() {
     trackPageView(location.pathname); // Track page views on route changes
   }, [location]);
 
+  useEffect(() => {
+    const lastClosed = parseInt(localStorage.getItem('lastModalClosedAt'), 10);
+    const now = Date.now();
+    if (!isNaN(lastClosed) && now - lastClosed < MODAL_INTERVAL_MS) {
+      setShowModalIcon(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    const userConsented = localStorage.getItem('facebookPixelConsent') === 'true';
+
+    if (userConsented && !consentGranted) {
+      grantConsent();
+    }
+  }, [consentGranted, grantConsent]);
+
+  const handleAcceptCookies = () => {
+    grantConsent();
+    localStorage.setItem('facebookPixelConsent', 'true');
+  };
+
   return (
     <div className="App">
+      <EventModal onClose={() => setShowModalIcon(true)} />
       <FacebookPixelSetup />
       <ScrollToTop />
-      <Header showSideBar={showSideBar} setShowSideBar={setShowSideBar} />
+      <Header
+        showSideBar={showSideBar}
+        setShowSideBar={setShowSideBar}
+        showModalIcon={showModalIcon}
+      />
       <Sidebar showSideBar={showSideBar} setShowSideBar={setShowSideBar} setSideRef={setSideRef} />
       <DynamicHeader
         title={currentRouteData.title}
@@ -66,6 +96,7 @@ function App() {
         <Route path="/menu" element={<FoodMenuPage />} />
         <Route path="/bar" element={<DrinkMenuPage />} />
         <Route path="/events" element={<EventsPage />} />
+        <Route path="/set-menu" element={<SetMenuPage />} />
         <Route path="/cards" element={<GiftCardPage />} />
         <Route path="/vip" element={<VipRoomPage />} />
         <Route path="/dress-code" element={<DressCodePage />} />
@@ -84,7 +115,7 @@ function App() {
             We use cookies to enhance your experience. By clicking "Accept", you consent to
             tracking.
           </p>
-          <Button onClick={grantConsent}>Accept cookies</Button>
+          <Button onClick={handleAcceptCookies}>Accept cookies</Button>
         </div>
       )}
     </div>

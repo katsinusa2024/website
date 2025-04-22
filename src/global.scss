@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
 @import url('./fonts/fonts.scss');
-@import "~video-react/styles/scss/video-react";
 
 body {
   margin: 0;
@@ -31,7 +30,7 @@ body{
 :root{
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-bras: #DAA520;
+  --color-bras: #daa520;
   --color-red: #9b0e0e;
 
   --background-white: #ffffff;

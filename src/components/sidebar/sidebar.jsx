@@ -36,6 +36,9 @@ const Sidebar = ({ showSideBar, setShowSideBar, setSideRef }) => {
           <li onClick={() => handleNavigate()}>
             <NavLink to={'/bar'}>Bar Menu</NavLink>
           </li>
+          <li onClick={() => handleNavigate()}>
+            <NavLink to={'/set-menu'}>Set Menu</NavLink>
+          </li>
           <li onClick={() => clickOnLink('venue')}>
             <NavLink to={'/'}>Gallery</NavLink>
           </li>
