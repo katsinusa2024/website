@@ -7,6 +7,8 @@ import events4 from '../../assets/images/events/events4.jpg';
 import eventt from '../../assets/images/events/eventt.jpg';
 import eventAll from '../../assets/images/events/eventAll.jpg';
 import events5 from '../../assets/images/events/events5.jpg';
+import revertedPoster from '../../assets/images/events/Reverted_Poster-min.png';
+import performigLive from '../../assets/images/events/performing-live.jpg';
 
 const now = new Date();
 
@@ -68,6 +70,30 @@ const eventsMock = [
     date: {}, // not needed for template
     imgUrl: eventAll,
     isRecurring: true,
+  },
+  {
+    id: uuid(),
+    title: 'ALLIGATOR BEACH',
+    description: 'A high energy funky NOLA party band at KATSIN',
+    date: { day: '29', month: 'May', year: '2025' },
+    imgUrl: revertedPoster,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'PERFORMING LIVE',
+    description: 'MAIYA SYKES & LEEMO, Featuring An All Star Band',
+    date: { day: '22', month: 'May', year: '2025' },
+    imgUrl: performigLive,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'Vatche',
+    description: 'Legendary Vatche with Mediterranean Favorite Songs',
+    date: { day: '12', month: 'Jun', year: '2025' },
+    imgUrl: events4,
+    isRecurring: false,
   },
 ];
 
