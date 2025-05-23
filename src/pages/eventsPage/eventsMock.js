@@ -9,6 +9,7 @@ import eventAll from '../../assets/images/events/eventAll.jpg';
 import events5 from '../../assets/images/events/events5.jpg';
 import revertedPoster from '../../assets/images/events/Reverted_Poster-min.png';
 import performigLive from '../../assets/images/events/performing-live.jpg';
+import jackjr from '../../assets/images/events/jackjr.jpg';
 
 const now = new Date();
 
@@ -93,6 +94,14 @@ const eventsMock = [
     description: 'Legendary Vatche with Mediterranean Favorite Songs',
     date: { day: '12', month: 'Jun', year: '2025' },
     imgUrl: events4,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'Jack Jr. & MAZ JOBRANI',
+    description: 'Comedy & Fun',
+    date: { day: '10', month: 'Jun', year: '2025' },
+    imgUrl: jackjr,
     isRecurring: false,
   },
 ];
