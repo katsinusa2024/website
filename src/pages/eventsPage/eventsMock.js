@@ -10,6 +10,7 @@ import events5 from '../../assets/images/events/events5.jpg';
 import revertedPoster from '../../assets/images/events/Reverted_Poster-min.png';
 import performigLive from '../../assets/images/events/performing-live.jpg';
 import jackjr from '../../assets/images/events/jackjr.jpg';
+import henris2 from '../../assets/images/events/event6.jpg';
 
 const now = new Date();
 
@@ -102,6 +103,14 @@ const eventsMock = [
     description: 'Comedy & Fun',
     date: { day: '10', month: 'Jun', year: '2025' },
     imgUrl: jackjr,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'Henris Way Presents',
+    description: 'EMI SECREST NIC JACKSON',
+    date: { day: '5', month: 'Jun', year: '2025' },
+    imgUrl: henris2,
     isRecurring: false,
   },
 ];
