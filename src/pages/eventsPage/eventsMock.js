@@ -134,7 +134,7 @@ const eventsMock = [
     id: uuid(),
     title: 'Henris Way Presents',
     description: 'Nick jackson & Sierra Sellers. Brian Collier feat Live Band',
-    date: { day: '06', month: 'Jul', year: '2025' },
+    date: { day: '26', month: 'Jun', year: '2025' },
     imgUrl: henrisWay2,
     isRecurring: false,
   },
