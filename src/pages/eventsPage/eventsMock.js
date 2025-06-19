@@ -11,6 +11,7 @@ import revertedPoster from '../../assets/images/events/Reverted_Poster-min.png';
 import performigLive from '../../assets/images/events/performing-live.jpg';
 import jackjr from '../../assets/images/events/jackjr.jpg';
 import henris2 from '../../assets/images/events/event6.jpg';
+import henrisWay2 from '../../assets/images/events/henris-way2.PNG';
 
 const now = new Date();
 
@@ -111,6 +112,39 @@ const eventsMock = [
     description: 'EMI SECREST NIC JACKSON',
     date: { day: '5', month: 'Jun', year: '2025' },
     imgUrl: henris2,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'Vatche',
+    description: 'Legendary Vatche with Mediterranean Favorite Songs',
+    date: { day: '24', month: 'Jul', year: '2025' },
+    imgUrl: events4,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'Jack Jr. & MAZ JOBRANI',
+    description: 'Comedy & Fun',
+    date: { day: '20', month: 'Jul', year: '2025' },
+    imgUrl: jackjr,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'Henris Way Presents',
+    description: 'Nick jackson & Sierra Sellers. Brian Collier feat Live Band',
+    date: { day: '06', month: 'Jul', year: '2025' },
+    imgUrl: henrisWay2,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'Paris Chansons',
+    description:
+      'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
+    date: { day: '10', month: 'Jul', year: '2025' },
+    imgUrl: events1,
     isRecurring: false,
   },
 ];
