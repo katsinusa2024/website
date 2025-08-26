@@ -13,7 +13,7 @@ export const appetizers = [
         name: 'goat cheese, pine nuts, ponzu',
       },
     ],
-    price: '19',
+    price: '22',
   },
   {
     id: uuid(),
@@ -52,7 +52,7 @@ export const appetizers = [
         name: 'bluefin tuna, ponzu, tobiko caviar',
       },
     ],
-    price: '25',
+    price: '27',
   },
   {
     id: uuid(),
@@ -65,7 +65,7 @@ export const appetizers = [
         name: 'arugula, french dressing, ponzu, fresh truffles',
       },
     ],
-    price: '29',
+    price: '33',
   },
   {
     id: uuid(),
@@ -79,7 +79,7 @@ export const appetizers = [
         name: 'tom yUm SAUCE, tobiko caviar, jalapeno',
       },
     ],
-    price: '18',
+    price: '19',
   },
   {
     id: uuid(),
@@ -90,10 +90,10 @@ export const appetizers = [
         name: 'tuna, capers, shallots, chives,',
       },
       {
-        name: 'avocado mouse, kataifi pasty, tobiko caviar',
+        name: 'avocado mousse, kataifi pastry, tobiko caviar',
       },
     ],
-    price: '23',
+    price: '26',
   },
   {
     id: uuid(),
@@ -103,10 +103,10 @@ export const appetizers = [
         name: 'salmon, cucumber, avocado,',
       },
       {
-        name: 'shallotS chives, tamarind sauce, ponzu',
+        name: 'shallot, chives, tamarind sauce, ponzu',
       },
     ],
-    price: '17',
+    price: '21',
   },
   {
     id: uuid(),
@@ -147,7 +147,7 @@ export const salads = [
         name: 'spicy aioli, crunch',
       },
     ],
-    price: '26',
+    price: '27',
   },
   {
     id: uuid(),
@@ -161,7 +161,7 @@ export const salads = [
         name: 'crushed olives, ponzu',
       },
     ],
-    price: '25',
+    price: '24',
   },
   {
     id: uuid(),
@@ -175,7 +175,7 @@ export const salads = [
         name: 'avocado, spring mix, pine nuts, house made pesto',
       },
     ],
-    price: '23',
+    price: '25',
   },
   {
     id: uuid(),
@@ -189,7 +189,7 @@ export const salads = [
         name: 'ponzu bouquet of oils, olive, smoked and truffle',
       },
     ],
-    price: '25',
+    price: '26',
   },
   {
     id: uuid(),
@@ -202,7 +202,7 @@ export const salads = [
         name: 'mint, parmesan cheese, bacon, crunch',
       },
     ],
-    price: '21',
+    price: '23',
   },
   {
     id: uuid(),
@@ -230,7 +230,7 @@ export const salads = [
         name: 'olives, basil, french dressing, feta',
       },
     ],
-    price: '21',
+    price: '23',
   },
 ];
 
@@ -247,7 +247,7 @@ export const specialties = [
         name: 'tzatziki, couscous tabbouleh',
       },
     ],
-    price: '43',
+    price: '47',
   },
   {
     id: uuid(),
@@ -307,7 +307,7 @@ export const specialties = [
         name: 'salmon, asparagus, edamame, lemon',
       },
     ],
-    price: '36',
+    price: '38',
   },
   {
     id: uuid(),
@@ -321,7 +321,7 @@ export const specialties = [
         name: 'confit potato, grilled spinach , truffle mayo',
       },
     ],
-    price: '32',
+    price: '33',
   },
   {
     id: uuid(),
@@ -348,7 +348,7 @@ export const specialties = [
         name: 'wafy sauce, mushroom sauce',
       },
     ],
-    price: '32',
+    price: '35',
   },
 
   {
@@ -364,6 +364,19 @@ export const specialties = [
       },
     ],
     price: '24',
+  },
+  {
+    id: uuid(),
+    name: 'Chef’s Special BEEF SHORT RIBS 4 lb',
+    description: [
+      {
+        name: 'marinated pickles and onion, tzatziki,',
+      },
+      {
+        name: 'Grilled Vegetables, BBQ sauce, lettuce',
+      },
+    ],
+    price: '162',
   },
 ];
 
@@ -411,7 +424,7 @@ export const steaksFromCharcoalOven = [
     name: 'grain fed RIBEYE FILET Australian f1 Wagyu 16OZ',
     type: 'GF',
     // description: 'Grilled red peppers, garlic, wallnuts, fresh herbs',
-    price: '73',
+    price: '76',
   },
   {
     id: uuid(),
@@ -483,7 +496,7 @@ export const sides = [
     name: 'ASPARAGUS with Hollandaise sauce',
     type: 'GF, V',
     // description: '',
-    price: '16',
+    price: '19',
   },
   {
     id: uuid(),
@@ -586,13 +599,13 @@ export const dessert = [
   },
   {
     id: uuid(),
-    name: 'pavlova dessert show party of six and more , charge per person (PP)',
+    name: 'pavlova dessert show party of six and more , charge per person',
     description: [
       {
-        name: 'merengue, homemade pastry cream,',
+        name: 'meringue, homemade pastry cream,',
       },
       {
-        name: 'mango -passion fruit sauce, berry sauce, berries, mint',
+        name: 'mango-passion fruit sauce, berry sauce, berries, mint',
       },
     ],
     price: '35PP',
