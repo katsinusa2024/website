@@ -14,6 +14,9 @@ import henris2 from '../../assets/images/events/event6.jpg';
 import henrisWay2 from '../../assets/images/events/henris-way2.PNG';
 import paris2 from '../../assets/images/events/Katsin Square_2-1.png'
 import vatche2 from '../../assets/images/events/VATCHE-1.png'
+import parissep from '../../assets/images/events/parissepjpg.jpg';
+import jackict from '../../assets/images/events/jackoct.jpeg';
+import laverdad from '../../assets/images/events/laverdadoct.JPG';
 
 const now = new Date();
 
@@ -164,6 +167,31 @@ const eventsMock = [
     description: 'Legendary Vatche with Mediterranean Favorite Songs',
     date: { day: '20', month: 'Aug', year: '2025' },
     imgUrl: vatche2,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'Paris Chansons',
+    description:
+        'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
+    date: { day: '11', month: 'Sep', year: '2025' },
+    imgUrl: parissep,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'Jack Jr. & MAZ JOBRANI',
+    description: 'Comedy & Fun',
+    date: { day: '07', month: 'Oct', year: '2025' },
+    imgUrl: jackict,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'LA VERDAD',
+    description: 'FREE CONCERT',
+    date: { day: '30', month: 'Oct', year: '2025' },
+    imgUrl: laverdad,
     isRecurring: false,
   },
 ];
