@@ -12,11 +12,13 @@ import performigLive from '../../assets/images/events/performing-live.jpg';
 import jackjr from '../../assets/images/events/jackjr.jpg';
 import henris2 from '../../assets/images/events/event6.jpg';
 import henrisWay2 from '../../assets/images/events/henris-way2.PNG';
-import paris2 from '../../assets/images/events/Katsin Square_2-1.png'
-import vatche2 from '../../assets/images/events/VATCHE-1.png'
+import paris2 from '../../assets/images/events/Katsin Square_2-1.png';
+import vatche2 from '../../assets/images/events/VATCHE-1.png';
 import parissep from '../../assets/images/events/parissepjpg.jpg';
 import jackict from '../../assets/images/events/jackoct.jpeg';
-import laverdad from '../../assets/images/events/laverdadoct.JPG';
+import laverdad from '../../assets/images/events/laverdadoct30.JPG';
+import parisoct23 from '../../assets/images/events/parisoct23.png';
+import jacknov18 from '../../assets/images/events/jacknov18.jpeg';
 
 const now = new Date();
 
@@ -156,7 +158,7 @@ const eventsMock = [
     id: uuid(),
     title: 'Paris Chansons',
     description:
-        'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
+      'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
     date: { day: '14', month: 'Aug', year: '2025' },
     imgUrl: paris2,
     isRecurring: false,
@@ -173,7 +175,7 @@ const eventsMock = [
     id: uuid(),
     title: 'Paris Chansons',
     description:
-        'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
+      'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
     date: { day: '11', month: 'Sep', year: '2025' },
     imgUrl: parissep,
     isRecurring: false,
@@ -188,10 +190,27 @@ const eventsMock = [
   },
   {
     id: uuid(),
+    title: 'Paris Chansons',
+    description:
+      'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
+    date: { day: '23', month: 'Oct', year: '2025' },
+    imgUrl: parisoct23,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
     title: 'LA VERDAD',
     description: 'FREE CONCERT',
     date: { day: '30', month: 'Oct', year: '2025' },
     imgUrl: laverdad,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'Jack Jr. & MAZ JOBRANI',
+    description: 'Comedy & Fun',
+    date: { day: '18', month: 'Nov', year: '2025' },
+    imgUrl: jacknov18,
     isRecurring: false,
   },
 ];
