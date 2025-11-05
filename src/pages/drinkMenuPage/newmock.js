@@ -1307,7 +1307,7 @@ const redwinebyglass = [
       },
       {
         id: uuid(),
-        name: 'CAYMUS SUISUN WALKING FOOL RED BLAND',
+        name: 'WALKING FOOL RED BLAND',
         price: '16',
       },
       {
@@ -1453,52 +1453,27 @@ const freshSqueezed = [
       {
         id: uuid(),
         name: 'ORANGE',
-        price: '13',
+        price: '8',
       },
       {
         id: uuid(),
         name: 'GRAPEFRUIT',
-        price: '13',
+        price: '8',
       },
       {
         id: uuid(),
         name: 'APPLE',
-        price: '13',
-      },
-      {
-        id: uuid(),
-        name: 'CARROT',
-        price: '13',
-      },
-      {
-        id: uuid(),
-        name: 'CANTALOUPE',
-        price: '12',
-      },
-      {
-        id: uuid(),
-        name: 'WATERMELON / Basil',
-        price: '13',
+        price: '8',
       },
       {
         id: uuid(),
         name: 'PINEAPPLE',
-        price: '13',
+        price: '8',
       },
       {
         id: uuid(),
-        name: 'KIWI / APPLE / BASIL',
-        price: '12',
-      },
-      {
-        id: uuid(),
-        name: 'GINGER',
-        price: '3',
-      },
-      {
-        id: uuid(),
-        name: 'CELERY',
-        price: '3',
+        name: 'CRANBERRY',
+        price: '8',
       },
     ],
   },
@@ -1511,47 +1486,64 @@ const cocktails = [
     drink: [
       {
         id: uuid(),
-        name: 'AILEN FROM NICARAGUA',
-        description: 'FLOR DE CANA RUM, AVERNA AMARO, GIFFARD CACAO',
-        price: '20',
+        name: 'VELVET DROP',
+        description: 'BOURBON, RUM, ORANGE, PEACH, VANILLA, RED WINE',
+        price: '22',
       },
       {
         id: uuid(),
         name: 'PINK GARDEN',
-        description: 'GIN, SOUR MIX, ROSE JAM, PINK GRAPEFRUIT TONIC',
+        description: 'TANQUERAY GIN, SOUR MIX, ROSE JAM, PINK GRAPEFRUIT TONIC',
         price: '21',
       },
       {
         id: uuid(),
         name: 'VESTALIA',
-        description: 'WHISKEY, ST- GERMAIN, BANANE DU BRESIL, PINEAPPLE, APPLE,\n' +
-            'SOUR MIX, VANILLA SYRUP, YELLOW CHARTREUS',
+        description:
+            'WHISKEY, ST-GERMAIN, BANANE DU BRESIL, PINEAPPLE, APPLE, SOUR MIX, VANILLA SYRUP, YELLOW CHARTREUS',
         price: '22',
       },
       {
         id: uuid(),
-        name: 'MISSION TO THE FRANCE',
-        description: 'COGNAC, DOM BENEDICTINE, APPLE JUICE, SOUR MIX, VANILLA SYRUP,\n' +
-            'ANGOSTURA AROMATIC BITTERs, GINGER ALE',
-        price: '20',
+        name: 'GOLDEN RITUAL',
+        description: 'COGNAC, CACAO, HERBAL BITTERS',
+        price: '23',
       },
       {
         id: uuid(),
         name: 'ANGEL MIA',
-        description: 'VODKA, ITALICUS, SOUR MIX, WHITE PEACH SYRUP, COCONUT MILK,\n' +
-            'STRAWBERRY JUICE',
+        description:
+            'KETEL ONE, ITALICUS, SOUR MIX, WHITE PEACH SYRUP, COCONUT MILK, STRAWBERRY JUICE',
         price: '21',
       },
       {
         id: uuid(),
         name: 'WHAT YOU WANT',
-        description: 'TEQUILA, FRESH WATERMELON JUiCE, lychee LIQUEUR, SOUR MIX,\n' +
-            'PEACH SYRUP, HOMEMADE PASSION FRUIT FOAM',
+        description:
+            'CASAMIGOS BLANCO, FRESH WATERMELON JUICE, LYCHEE LIQUEUR, SOUR MIX, PEACH SYRUP, HOUSEMADE PASSION FRUIT FOAM',
         price: '22',
       },
-    ]
+      {
+        id: uuid(),
+        name: 'BLOOM AND BERRY',
+        description: 'VANILLA VODKA, GRAND MARNIER, STRAWBERRY, PINEAPPLE',
+        price: '23',
+      },
+      {
+        id: uuid(),
+        name: 'BASIL BREEZE',
+        description: 'VODKA, ST-GERMAIN, CUCUMBER, BASIL',
+        price: '22',
+      },
+      {
+        id: uuid(),
+        name: 'MOONLIGHT',
+        description: 'TEQUILA, APEROL, BANANA',
+        price: '23',
+      },
+    ],
   },
-]
+];
 
 const wineList = [
   {

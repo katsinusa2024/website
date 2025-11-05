@@ -25,7 +25,7 @@ const Footer = () => {
                 <div className="hours">
                   <div>
                     <img src={clock} alt="img" />
-                    <p>6:00PM - 12:00AM</p>
+                    <p>6:30PM - 10:30PM</p>
                   </div>
                 </div>
               </div>
@@ -39,7 +39,7 @@ const Footer = () => {
                 <div className="hours">
                   <div>
                     <img src={clock} alt="img" />
-                    <p>6:00PM - 12:00AM</p>
+                    <p>6:30PM - 10:30PM</p>
                   </div>
                 </div>
               </div>
@@ -128,7 +128,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="poweredBy mb-0">
-        Powered by <a href="https://www.linkedin.com/in/mkrtum-abrahamyan/">M. A.</a>
+        Made by <a href="https://www.linkedin.com/in/mkrtum-abrahamyan/">Mkrtum Abrahamyan</a>
       </p>
     </div>
   );

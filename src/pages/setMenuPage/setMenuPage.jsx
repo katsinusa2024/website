@@ -1,7 +1,7 @@
 import React from 'react';
 import './setMenuPage.scss';
-import setMenu2 from '../../assets/images/setMenu/setMenu125.jpg';
-import setMenu3 from '../../assets/images/setMenu/setMenu150.jpg';
+import setMenu2 from '../../assets/images/setMenu/set-menu130.jpg';
+import setMenu3 from '../../assets/images/setMenu/set-menu160.jpg';
 
 const SetMenuPage = () => {
   return (
