@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid';
 export const appetizers = [
   {
     id: uuid(),
-    name: 'Beetroot carpaccio',
+    name: 'Beetroot carpaccio (NEW)',
     type: 'V, GF',
     description: [
       { name: 'BEETROOT, truffle mayo, persimmon,' },
@@ -50,16 +50,6 @@ export const appetizers = [
   },
   {
     id: uuid(),
-    name: 'Spicy tuna and salmon crispy bites',
-    type: 'GF',
-    description: [
-      { name: 'Fried Japanese rice, salmon, tuna,' },
-      { name: 'Tom Yum sauce, tobiko caviar, jalapeño' },
-    ],
-    price: '19',
-  },
-  {
-    id: uuid(),
     name: 'Tuna tartare',
     type: 'GF',
     description: [
@@ -71,6 +61,7 @@ export const appetizers = [
   {
     id: uuid(),
     name: 'Salmon tartare',
+    type: 'GF',
     description: [
       { name: 'salmon, cucumber, avocado,' },
       { name: 'shallot, chives, tamarind sauce, ponzu' },
@@ -79,7 +70,7 @@ export const appetizers = [
   },
   {
     id: uuid(),
-    name: 'Baked oysters',
+    name: 'Baked oysters (NEW)',
     type: 'GF',
     description: [
       { name: 'Half dozen baked oysters with chili garlic sauce' },
@@ -101,7 +92,7 @@ export const appetizers = [
 export const salads = [
   {
     id: uuid(),
-    name: 'Grilled shrimp',
+    name: 'Grilled shrimp (NEW)',
     description: [
       { name: 'spring mix, shrimp, cherry tomatoes,' },
       { name: 'sun dried tomatoes, bell pepper, French dressing,' },
@@ -150,16 +141,6 @@ export const salads = [
   },
   {
     id: uuid(),
-    name: 'Grilled beef',
-    type: 'GF',
-    description: [
-      { name: 'mixed greens, grilled beef, pickled cucumbers,' },
-      { name: 'mushrooms, crispy potatoes, walnuts' },
-    ],
-    price: '29',
-  },
-  {
-    id: uuid(),
     name: 'Greek',
     type: 'V, GF',
     description: [
@@ -174,7 +155,7 @@ export const salads = [
 export const specialties = [
   {
     id: uuid(),
-    name: 'Grilled lamb chops Moroccan style',
+    name: 'Grilled lamb chops Moroccan style (NEW)',
     type: 'GF',
     description: [
       { name: 'lamb chops, baked quince or apple,' },
@@ -202,46 +183,17 @@ export const specialties = [
   },
   {
     id: uuid(),
-    name: 'Grilled jumbo tiger prawns',
-    type: 'GF',
-    description: [
-      { name: 'tiger prawns, tarragon sauce, spinach, lemon' },
-    ],
-    price: '39',
-  },
-  {
-    id: uuid(),
-    name: 'Chilean seabass filet',
-    type: 'GF',
-    description: [
-      { name: 'Patagonian toothfish, Asian style sauce,' },
-      { name: 'spinach, broccoli, edamame' },
-    ],
-    price: '56',
-  },
-  {
-    id: uuid(),
     name: 'Atlantic salmon filet',
-    type: 'GF',
-    description: [{ name: 'salmon, asparagus, edamame, lemon' }],
-    price: '38',
-  },
-  {
-    id: uuid(),
-    name: 'Moroccan octopus',
-    type: 'GF',
     description: [
-      { name: 'grilled octopus, Romesco sauce,' },
-      { name: 'confit potato, grilled spinach, truffle mayo' },
+      { name: 'salmon, asparagus, edamame , lemon' },
     ],
-    price: '33',
+    price: '38',
   },
   {
     id: uuid(),
     name: 'Greek style mini beef kebabs',
     description: [
-      { name: 'ground beef, tzatziki,' },
-      { name: 'herbs, zaatar spices, pita' },
+      { name: 'ground beef, tzatziki, herbs, zaatar spices, pita' },
     ],
     price: '39',
   },
@@ -249,9 +201,7 @@ export const specialties = [
     id: uuid(),
     name: 'Grilled chicken thighs',
     type: 'GF',
-    description: [
-      { name: 'pita, herbs, pickles, pepper sauce' },
-    ],
+    description: [{ name: 'pita, herbs, pickles, pepper sauce' }],
     price: '35',
   },
   {
@@ -260,64 +210,37 @@ export const specialties = [
     type: 'GF, V, VG',
     description: [
       { name: 'cauliflower, avocado mousse,' },
-      {
-        name: 'black garlic tahini sauce, sriracha sauce, tonkatsu sauce',
-      },
+      { name: 'black garlic tahini sauce, sriracha sauce, tonkatsu sauce' },
     ],
     price: '24',
   },
   {
     id: uuid(),
-    name: 'Chef’s special beef short ribs 4 lb',
-    description: [
-      { name: 'marinated pickles and onion, tzatziki,' },
-      { name: 'grilled vegetables, BBQ sauce, lettuce' },
-    ],
-    price: '162',
+    name: 'PORK chop american kurobuta 16 OZ',
+    price: '49',
   },
-];
-
-// =================== SURF & TURF ===================
-export const surfTurf = [
   {
     id: uuid(),
     name: 'Turf board',
     type: 'GF',
     description: [
-      {
-        name: 'Australian wagyu steak, pork BBQ, grilled chicken, grilled lamb chops,',
-      },
+      { name: 'Australian wagyu steak, pork BBQ, grilled chicken, grilled lamb chops,' },
       { name: 'grilled vegetables, sauces' },
     ],
     price: '258',
-  },
-  {
-    id: uuid(),
-    name: 'Surf board',
-    type: 'GF',
-    description: [
-      {
-        name: 'Grilled branzino, grilled salmon, tiger prawns, octopus,',
-      },
-      { name: 'baked oysters, grilled vegetables, sauces' },
-    ],
-    price: '276',
   },
 ];
 
 // =================== STEAKS ===================
 export const steaksFromCharcoalOven = [
-  { id: uuid(), name: 'USDA Prime Angus Ribeye Filet, 16 oz', type: 'GF', price: '76' },
+  { id: uuid(), name: 'USDA Prime Angus Ribeye Filet, 16 oz', type: 'GF', price: '79' },
   { id: uuid(), name: 'Grain-fed Ribeye Filet Australian F1 Wagyu, 16 oz', type: 'GF', price: '76' },
-  { id: uuid(), name: 'Prime Angus New York Strip, 14 oz', type: 'GF', price: '69' },
   { id: uuid(), name: 'Angus Filet Mignon, 8 oz', type: 'GF', price: '59' },
-  { id: uuid(), name: 'Pork Chop American Kurobuta, 16 oz', type: 'GF', price: '49' },
 ];
 
 // =================== SAUCES ===================
 export const favor = [
   { id: uuid(), name: 'Peppercorn', price: '4' },
-  { id: uuid(), name: 'Blue Cheese', price: '4' },
   { id: uuid(), name: 'BBQ Sauce', price: '4' },
   { id: uuid(), name: 'Ranch', price: '4' },
   { id: uuid(), name: 'Truffle Mayo', price: '4' },
@@ -327,12 +250,10 @@ export const favor = [
 // =================== SIDES ===================
 export const sides = [
   { id: uuid(), name: 'Lobster Mashed Potatoes', type: 'GF', price: '26' },
-  { id: uuid(), name: 'Asparagus with Hollandaise sauce', type: 'GF, V', price: '19' },
+  { id: uuid(), name: 'Asparagus', type: 'GF, V', price: '14' },
   { id: uuid(), name: 'Grilled Vegetables', type: 'GF, V, VG', price: '14' },
-  { id: uuid(), name: 'Truffle Orzo', type: 'V', price: '22' },
-  { id: uuid(), name: 'Mac & Cheese', type: 'V', price: '18' },
   { id: uuid(), name: 'French Fries', type: 'GF, V', price: '14' },
-  { id: uuid(), name: 'Sautéed Mushrooms', type: 'GF, V', price: '14' },
+  { id: uuid(), name: 'Sautéed Mushrooms', type: 'GF, V', price: '15' },
   { id: uuid(), name: 'Bread Basket LG/SM', price: '6/4' },
 ];
 
@@ -340,15 +261,15 @@ export const sides = [
 export const dessert = [
   { id: uuid(), name: 'Pahlava Cheesecake', price: '18' },
   { id: uuid(), name: 'Katsin Signature Medovik with Gelato', price: '17' },
-  { id: uuid(), name: "Chef's Special Carrot Cake", price: '17' },
+  { id: uuid(), name: "Chef's Special Carrot Cake (NEW)", price: '17' },
   { id: uuid(), name: 'Dubai Chocolate Tart', price: '19' },
-  { id: uuid(), name: 'Seasonal Fruit Platter', price: '62' },
+  { id: uuid(), name: 'Seasonal Fruit Platter (NEW)', price: '62' },
   {
     id: uuid(),
     name: 'Katsin Dessert Tower',
     description: [
       { name: 'Katsin dessert mix, ice cream,' },
-      { name: "fruits & berries served with nitro ice" },
+      { name: 'fruits & berries served with nitro ice' },
     ],
     price: '150',
   },
@@ -357,32 +278,33 @@ export const dessert = [
     name: 'Pavlova Dessert Show (party of six+, charge per person)',
     description: [
       { name: 'meringue, homemade pastry cream,' },
-      {
-        name: 'mango-passion fruit sauce, berry sauce, berries, mint',
-      },
+      { name: 'mango-passion fruit sauce, berry sauce, berries, mint' },
     ],
-    price: '35PP',
+    price: '35 PP',
   },
 ];
 
 // =================== Special weekend menu ===================
 export const specialWeekendMenu = [
-  { id: uuid(), name: 'surf board',
+  {
+    id: uuid(),
+    name: 'Surf Board',
     description: [
-      { name: 'Grilled branzino, grilled salmon, Tiger prawns,' },
-      {
-        name: 'Octopus, baked oysters, grilled vegetables, sauces',
-      },
+      { name: 'Grilled branzino, grilled salmon, tiger prawns,' },
+      { name: 'octopus, baked oysters, grilled vegetables, sauces' },
     ],
-    type: 'GF', price: '276' },
-  { id: uuid(), name: 'Chef’s Special BEEF SHORTRIBS 4 lb',
+    type: 'GF',
+    price: '276',
+  },
+  {
+    id: uuid(),
+    name: 'Chef’s Special Beef Shortribs 4 LB',
     description: [
-      { name: 'marinated pickles and onion, tzatziki, ' },
-      {
-        name: 'grilled vegetables, bbq sauce, lettuce',
-      },
+      { name: 'marinated pickles and onion, tzatziki,' },
+      { name: 'grilled vegetables, BBQ sauce, lettuce' },
     ],
-    price: '162' },
+    price: '162',
+  },
 ];
 
 // =================== MENU WRAPPER ===================
@@ -395,19 +317,13 @@ export const foodMenu = [
     description: 'Roasted in charcoal oven',
     type: specialties,
   },
-  {
-    id: uuid(),
-    title: 'Special Surf & Turf Combos',
-    description: 'Set for group of 4',
-    type: surfTurf,
-  },
   { id: uuid(), title: 'STEAKS FROM CHARCOAL OVEN', type: steaksFromCharcoalOven },
   { id: uuid(), title: 'SAUCES', type: favor },
   { id: uuid(), title: 'SIDES', type: sides },
   { id: uuid(), title: 'DESSERT', type: dessert },
   {
     id: uuid(),
-    title: 'Special weekend menu',
+    title: 'Special Weekend Menu',
     description: 'Set for group of 4',
     type: specialWeekendMenu,
   },
