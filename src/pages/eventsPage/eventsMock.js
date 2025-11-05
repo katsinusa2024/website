@@ -19,6 +19,7 @@ import jackict from '../../assets/images/events/jackoct.jpeg';
 import laverdad from '../../assets/images/events/laverdadoct30.JPG';
 import parisoct23 from '../../assets/images/events/parisoct23.png';
 import jacknov18 from '../../assets/images/events/jacknov18.jpeg';
+import chansonNov20 from '../../assets/images/events/chansonnNov20.JPG';
 
 const now = new Date();
 
@@ -211,6 +212,15 @@ const eventsMock = [
     description: 'Comedy & Fun',
     date: { day: '18', month: 'Nov', year: '2025' },
     imgUrl: jacknov18,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'Paris Chansons',
+    description:
+        'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
+    date: { day: '20', month: 'Nov', year: '2025' },
+    imgUrl: chansonNov20,
     isRecurring: false,
   },
 ];
