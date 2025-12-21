@@ -1,8 +1,8 @@
 import { v4 as uuid } from 'uuid';
 
-import events1 from '../../assets/images/events/events1.jpg';
-import events2 from '../../assets/images/events/events2.jpeg';
-import events3 from '../../assets/images/events/events3.png';
+import events1 from '../../assets/images/events/Katsin 1-29-26.jpg';
+// import events2 from '../../assets/images/events/events2.jpeg';
+// import events3 from '../../assets/images/events/events3.png';
 import events4 from '../../assets/images/events/events4.jpg';
 import eventt from '../../assets/images/events/eventt.jpg';
 import eventAll from '../../assets/images/events/eventAll.jpg';
@@ -12,14 +12,10 @@ import performigLive from '../../assets/images/events/performing-live.jpg';
 import jackjr from '../../assets/images/events/jackjr.jpg';
 import henris2 from '../../assets/images/events/event6.jpg';
 import henrisWay2 from '../../assets/images/events/henris-way2.PNG';
-import paris2 from '../../assets/images/events/Katsin Square_2-1.png';
 import vatche2 from '../../assets/images/events/VATCHE-1.png';
-import parissep from '../../assets/images/events/parissepjpg.jpg';
 import jackict from '../../assets/images/events/jackoct.jpeg';
 import laverdad from '../../assets/images/events/laverdadoct30.JPG';
-import parisoct23 from '../../assets/images/events/parisoct23.png';
 import jacknov18 from '../../assets/images/events/jacknov18.jpeg';
-import chansonNov20 from '../../assets/images/events/chansonnNov20.JPG';
 import mediterranean from '../../assets/images/events/mediterranean.PNG';
 
 const now = new Date();
@@ -31,32 +27,8 @@ const eventsMock = [
     title: 'Paris Chansons',
     description:
       'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
-    date: { day: '15', month: 'May', year: '2025' },
+    date: { day: '29', month: 'Jan', year: '2026' },
     imgUrl: events1,
-    isRecurring: false,
-  },
-  {
-    id: uuid(),
-    title: 'Henris Way Presents',
-    description: 'The Gumbo Brothers featuring Apollo Jai. Good Vibes With a Beat you Can Feel',
-    date: { day: '01', month: 'May', year: '2025' },
-    imgUrl: events2,
-    isRecurring: false,
-  },
-  {
-    id: uuid(),
-    title: 'Titiano',
-    description: 'The Voice of Aznavour',
-    date: { day: '04', month: 'May', year: '2025' },
-    imgUrl: events3,
-    isRecurring: false,
-  },
-  {
-    id: uuid(),
-    title: 'Vatche',
-    description: 'Legendary Vatche with Mediterranean Favorite Songs',
-    date: { day: '08', month: 'May', year: '2025' },
-    imgUrl: events4,
     isRecurring: false,
   },
   {
@@ -147,24 +119,24 @@ const eventsMock = [
     imgUrl: henrisWay2,
     isRecurring: false,
   },
-  {
-    id: uuid(),
-    title: 'Paris Chansons',
-    description:
-      'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
-    date: { day: '10', month: 'Jul', year: '2025' },
-    imgUrl: events1,
-    isRecurring: false,
-  },
-  {
-    id: uuid(),
-    title: 'Paris Chansons',
-    description:
-      'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
-    date: { day: '14', month: 'Aug', year: '2025' },
-    imgUrl: paris2,
-    isRecurring: false,
-  },
+  // {
+  //   id: uuid(),
+  //   title: 'Paris Chansons',
+  //   description:
+  //     'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
+  //   date: { day: '10', month: 'Jul', year: '2025' },
+  //   imgUrl: events1,
+  //   isRecurring: false,
+  // },
+  // {
+  //   id: uuid(),
+  //   title: 'Paris Chansons',
+  //   description:
+  //     'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
+  //   date: { day: '14', month: 'Aug', year: '2025' },
+  //   imgUrl: paris2,
+  //   isRecurring: false,
+  // },
   {
     id: uuid(),
     title: 'Vatche',
@@ -173,15 +145,15 @@ const eventsMock = [
     imgUrl: vatche2,
     isRecurring: false,
   },
-  {
-    id: uuid(),
-    title: 'Paris Chansons',
-    description:
-      'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
-    date: { day: '11', month: 'Sep', year: '2025' },
-    imgUrl: parissep,
-    isRecurring: false,
-  },
+  // {
+  //   id: uuid(),
+  //   title: 'Paris Chansons',
+  //   description:
+  //     'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
+  //   date: { day: '11', month: 'Sep', year: '2025' },
+  //   imgUrl: parissep,
+  //   isRecurring: false,
+  // },
   {
     id: uuid(),
     title: 'Jack Jr. & MAZ JOBRANI',
@@ -190,15 +162,15 @@ const eventsMock = [
     imgUrl: jackict,
     isRecurring: false,
   },
-  {
-    id: uuid(),
-    title: 'Paris Chansons',
-    description:
-      'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
-    date: { day: '23', month: 'Oct', year: '2025' },
-    imgUrl: parisoct23,
-    isRecurring: false,
-  },
+  // {
+  //   id: uuid(),
+  //   title: 'Paris Chansons',
+  //   description:
+  //     'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
+  //   date: { day: '23', month: 'Oct', year: '2025' },
+  //   imgUrl: parisoct23,
+  //   isRecurring: false,
+  // },
   {
     id: uuid(),
     title: 'LA VERDAD',
@@ -215,15 +187,15 @@ const eventsMock = [
     imgUrl: jacknov18,
     isRecurring: false,
   },
-  {
-    id: uuid(),
-    title: 'Paris Chansons',
-    description:
-        'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
-    date: { day: '20', month: 'Nov', year: '2025' },
-    imgUrl: chansonNov20,
-    isRecurring: false,
-  },
+  // {
+  //   id: uuid(),
+  //   title: 'Paris Chansons',
+  //   description:
+  //       'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
+  //   date: { day: '20', month: 'Nov', year: '2025' },
+  //   imgUrl: chansonNov20,
+  //   isRecurring: false,
+  // },
   {
     id: uuid(),
     title: 'Mediterranean Night',
