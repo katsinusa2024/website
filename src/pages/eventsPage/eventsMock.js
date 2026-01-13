@@ -5,6 +5,7 @@ import eventt from '../../assets/images/events/eventt.jpg';
 import eventAll from '../../assets/images/events/eventAll.jpg';
 import mediterranean from '../../assets/images/events/mediterranean.PNG';
 import vatchejan22 from '../../assets/images/events/vatche-jan-22.PNG';
+import jackJR0120 from '../../assets/images/events/Katsin.Jack.Jr.1.20.26.8pm.JPEG';
 
 const now = new Date();
 
@@ -50,6 +51,14 @@ const eventsMock = [
     description: 'A Night of Mediterranean Favorite Songs',
     date: { day: '22', month: 'Jan', year: '2026' },
     imgUrl: vatchejan22,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'Jack Jr.',
+    description: 'Comedy & Fun',
+    date: { day: '20', month: 'Jan', year: '2026' },
+    imgUrl: jackJR0120,
     isRecurring: false,
   },
 ];
