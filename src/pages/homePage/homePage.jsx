@@ -6,6 +6,7 @@ import { cuisineSlider, venueSlider } from "../../components/slider/mock";
 import { scrollToSection } from "../../utils/scrollToSection";
 
 import { useNavigate } from "react-router";
+import Article from "../../components/article/article";
 
 const HomePage = ({ sideRef }) => {
   const navigate = useNavigate();
@@ -70,6 +71,7 @@ const HomePage = ({ sideRef }) => {
           />
         </div>
       </section>
+      <Article/>
     </div>
   );
 };
