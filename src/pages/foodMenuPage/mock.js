@@ -349,10 +349,10 @@ export const foodMenu = [
   { id: uuid(), title: 'SAUCES', type: favor },
   { id: uuid(), title: 'SIDES', type: sides },
   { id: uuid(), title: 'DESSERT', type: dessert },
-  {
-    id: uuid(),
-    title: 'Special Weekend Menu',
-    description: 'Set for group of 4',
+  // {
+  //   id: uuid(),
+  //   title: 'Special Weekend Menu',
+  //   description: 'Set for group of 4',
     // type: specialWeekendMenu,
-  },
+  // },
 ];
