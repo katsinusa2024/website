@@ -6,6 +6,7 @@ import eventAll from '../../assets/images/events/eventAll.jpg';
 import mediterranean from '../../assets/images/events/mediterranean.PNG';
 import vatchejan22 from '../../assets/images/events/vatche-jan-22.PNG';
 import jackJR0120 from '../../assets/images/events/Katsin.Jack.Jr.1.20.26.8pm.JPEG';
+import laverdadfeb19 from '../../assets/images/events/laverdad.PNG'
 
 const now = new Date();
 
@@ -59,6 +60,14 @@ const eventsMock = [
     description: 'Comedy & Fun',
     date: { day: '20', month: 'Jan', year: '2026' },
     imgUrl: jackJR0120,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'LA VERDAD',
+    description: 'GABRIELITOS BIRTHDAY W/SPECIAL GUEST',
+    date: { day: '19', month: 'Feb', year: '2026' },
+    imgUrl: laverdadfeb19,
     isRecurring: false,
   },
 ];
