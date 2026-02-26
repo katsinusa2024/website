@@ -46,12 +46,11 @@ export const appetizers = [
       { name: 'beef tenderloin, focaccia croutons,' },
       { name: 'arugula, French dressing, ponzu, fresh truffles' },
     ],
-    price: '33',
+    price: '35',
   },
   {
     id: uuid(),
     name: 'Tuna tartare',
-    type: 'GF',
     description: [
       { name: 'tuna, capers, shallots, chives,' },
       { name: 'avocado mousse, kataifi pastry, tobiko caviar' },
@@ -70,7 +69,7 @@ export const appetizers = [
   },
   {
     id: uuid(),
-    name: 'Baked oysters (NEW)',
+    name: 'Baked oysters',
     type: 'GF',
     description: [
       { name: 'Half dozen baked oysters with chili garlic sauce' },
@@ -79,7 +78,7 @@ export const appetizers = [
   },
   {
     id: uuid(),
-    name: 'Chilled oysters',
+    name: 'Chilled oysters (NEW)',
     type: 'GF',
     description: [
       { name: 'Served with Tabasco, red vinegar, spicy aioli' },
@@ -151,7 +150,7 @@ export const salads = [
   },
   {
     id: uuid(),
-    name: 'VITELLO TONNATO (NEW)',
+    name: 'VITELLO TONNATO',
     type: '',
     description: [
       { name: 'SLICED ROAST BEEF, ARUGULA, ROMANO SALAD,' },
@@ -183,9 +182,9 @@ export const specialties = [
   },
   {
     id: uuid(),
-    name: 'SLOW COOKED 48 HRS WHOLE LAMB NECK',
+    name: 'SLOW COOKED 48 HRS WHOLE LAMB NECK (NEW)',
     description: [
-      { name: 'POTATO MOUSSE. BLACK GARLIC, TAHINI SAUCE, FLATBREAD, LETTUCE' },
+      { name: 'LETTUCE, PICKLED VEGETABLES, TZATZIKI SAUCE, FLATBREAD' },
     ],
     price: '69',
   },
@@ -239,7 +238,7 @@ export const specialties = [
   },
   {
     id: uuid(),
-    name: 'Turf board',
+    name: 'Turf board (SET FOR GROUP OF 4)',
     type: 'GF',
     description: [
       { name: 'Australian F1 wagyu steak, pork BBQ, grilled chicken, grilled lamb chops,' },
@@ -260,7 +259,7 @@ export const specialties = [
 
 // =================== STEAKS ===================
 export const steaksFromCharcoalOven = [
-  { id: uuid(), name: 'USDA PRIME ANGUS BONE-IN RIBEYE, 18 OZ', type: 'GF', price: '86' },
+  { id: uuid(), name: 'USDA PRIME ANGUS BONE-IN RIBEYE, 18 OZ', type: 'GF', price: '84' },
   { id: uuid(), name: 'GRAIN FED RIBEYE FILET AUSTRALIAN F1 WAGYU 16 OZ', type: 'GF', price: '79' },
   { id: uuid(), name: 'ANGUS FILET MIGNON, 8 OZ', type: 'GF', price: '59' },
 ];
@@ -303,7 +302,7 @@ export const dessert = [
   },
   {
     id: uuid(),
-    name: 'Pavlova Dessert Show (party of six+, charge per person)',
+    name: 'Pavlova Dessert Show (party of six and more, charge per person)',
     description: [
       { name: 'meringue, homemade pastry cream,' },
       { name: 'mango-passion fruit sauce, berry sauce, berries, mint' },
