@@ -6,7 +6,8 @@ import eventAll from '../../assets/images/events/eventAll.jpg';
 import mediterranean from '../../assets/images/events/mediterranean.PNG';
 import vatchejan22 from '../../assets/images/events/vatche-jan-22.PNG';
 import jackJR0120 from '../../assets/images/events/Katsin.Jack.Jr.1.20.26.8pm.JPEG';
-import laverdadfeb19 from '../../assets/images/events/laverdad.PNG'
+import laverdadfeb19 from '../../assets/images/events/laverdad.PNG';
+import paris0305 from '../../assets/images/events/paris0305.jpeg'
 
 const now = new Date();
 
@@ -68,6 +69,15 @@ const eventsMock = [
     description: 'GABRIELITOS BIRTHDAY W/SPECIAL GUEST',
     date: { day: '19', month: 'Feb', year: '2026' },
     imgUrl: laverdadfeb19,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'Paris Chansons',
+    description:
+        'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
+    date: { day: '05', month: 'March', year: '2026' },
+    imgUrl: paris0305,
     isRecurring: false,
   },
 ];
