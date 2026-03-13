@@ -8,6 +8,8 @@ import vatchejan22 from '../../assets/images/events/vatche-jan-22.PNG';
 import jackJR0120 from '../../assets/images/events/Katsin.Jack.Jr.1.20.26.8pm.JPEG';
 import laverdadfeb19 from '../../assets/images/events/laverdad.PNG';
 import paris0305 from '../../assets/images/events/paris0305.jpeg'
+import laverdadApril from '../../assets/images/events/laverdad-april-8.JPG';
+import vatcheMarch from '../../assets/images/events/vatche-march-25.PNG';
 
 const now = new Date();
 
@@ -78,6 +80,22 @@ const eventsMock = [
         'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
     date: { day: '05', month: 'March', year: '2026' },
     imgUrl: paris0305,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'LA VERDAD',
+    description: '',
+    date: { day: '08', month: 'Apr', year: '2026' },
+    imgUrl: laverdadApril,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'Vatche & Live Bound',
+    description: 'A Night of Mediterranean Melodies',
+    date: { day: '25', month: 'March', year: '2026' },
+    imgUrl: vatcheMarch,
     isRecurring: false,
   },
 ];
