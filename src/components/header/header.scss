@@ -1,4 +1,4 @@
-.header{
+.header {
   display: flex;
   position: fixed;
   z-index: 300;
@@ -10,74 +10,147 @@
   padding: 0 15px;
   align-items: center;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  .logo{
+
+  @media (max-width: 991px) {
+    height: 70px;
+  }
+
+  /* LOGO */
+  .logo {
     cursor: pointer;
     height: 100%;
     width: auto;
     padding: 5px;
     margin-right: 100px;
-    @media(max-width: 991px){
+
+    @media (max-width: 991px) {
       margin-right: 0;
     }
   }
-  @media(max-width: 991px){
-    height: 70px;
-  }
-  .location-link, .phone-link{
+
+  /* LOCATION + PHONE */
+  .location-link,
+  .phone-link {
     display: flex;
     align-items: center;
     color: var(--color-black);
-    transition: all 0.3s;
+    transition: all 0.25s ease;
     padding: 0 5px;
-    img{
+
+    img {
       width: 20px;
       height: 20px;
     }
-    span{
+
+    span {
       display: block;
       padding-left: 5px;
       font-weight: 600;
+      font-size: 14px;
     }
-    &:hover{
+
+    &:hover {
       transform: scale(1.05);
+      opacity: 0.8;
     }
-    @media(max-width: 991px){
-      span{
+
+    @media (max-width: 991px) {
+      span {
         display: none;
       }
-      img{
+
+      img {
         width: 24px;
         height: 24px;
       }
     }
-    @media (max-width: 576px){
+
+    @media (max-width: 576px) {
       display: none;
     }
   }
+
+  /* 🔥 BOOK BUTTON (YOUR CUSTOM BUTTON COMPONENT WILL USE THIS) */
+  .white {
+    background: transparent;
+    border: 1px solid #000;
+    color: #000;
+    padding: 8px 18px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #000;
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    &.inevents {
+      border-color: #000;
+    }
+
+    @media (max-width: 991px) {
+      padding: 7px 14px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 576px) {
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+  }
+
+  /* EVENT ICON */
   .event-icon {
     cursor: pointer;
+
     span {
       padding: 5px;
       margin-top: 5px;
       display: block;
-      img{
-        width: 32px;
-        height: 32px;
+
+      img {
+        width: 30px;
+        height: 30px;
       }
+
       &.rise-shake {
         animation: jump-shaking 1s infinite;
       }
     }
   }
 
+  /* ANIMATION */
   @keyframes jump-shaking {
-    0% { transform: translateX(0) }
-    25% { transform: translateY(-9px) }
-    35% { transform: translateY(-9px) rotate(17deg) }
-    55% { transform: translateY(-9px) rotate(-17deg) }
-    65% { transform: translateY(-9px) rotate(17deg) }
-    75% { transform: translateY(-9px) rotate(-17deg) }
-    100% { transform: translateY(0) rotate(0) }
+    0% { transform: translateX(0); }
+    25% { transform: translateY(-8px); }
+    35% { transform: translateY(-8px) rotate(15deg); }
+    55% { transform: translateY(-8px) rotate(-15deg); }
+    65% { transform: translateY(-8px) rotate(15deg); }
+    75% { transform: translateY(-8px) rotate(-15deg); }
+    100% { transform: translateY(0) rotate(0); }
   }
+}
 
+/* 🔥 MODAL FIX (VERY IMPORTANT) */
+.modal {
+  z-index: 9999;
+}
+
+/* 🔥 MODAL BUTTONS (used inside modal) */
+.book-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #222;
+  }
 }
