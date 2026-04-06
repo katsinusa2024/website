@@ -10,6 +10,7 @@ import laverdadfeb19 from '../../assets/images/events/laverdad.PNG';
 import paris0305 from '../../assets/images/events/paris0305.jpeg'
 import laverdadApril from '../../assets/images/events/laverdad-april-8.JPG';
 import vatcheMarch from '../../assets/images/events/vatche-march-25.PNG';
+import paris0430 from '../../assets/images/events/paris0430.JPEG'
 
 const now = new Date();
 
@@ -96,6 +97,15 @@ const eventsMock = [
     description: 'A Night of Mediterranean Melodies',
     date: { day: '25', month: 'March', year: '2026' },
     imgUrl: vatcheMarch,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'Paris Chansons',
+    description:
+        'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
+    date: { day: '30', month: 'Apr', year: '2026' },
+    imgUrl: paris0430,
     isRecurring: false,
   },
 ];
