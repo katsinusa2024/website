@@ -1,13 +1,13 @@
 import { v4 as uuid } from 'uuid';
 
-import events1 from '../../assets/images/events/Katsin 1-29-26.jpg';
+// import events1 from '../../assets/images/events/Katsin 1-29-26.jpg';
 import eventt from '../../assets/images/events/eventt.jpg';
 import eventAll from '../../assets/images/events/eventAll.jpg';
 import mediterranean from '../../assets/images/events/mediterranean.PNG';
 import vatchejan22 from '../../assets/images/events/vatche-jan-22.PNG';
 import jackJR0120 from '../../assets/images/events/Katsin.Jack.Jr.1.20.26.8pm.JPEG';
 import laverdadfeb19 from '../../assets/images/events/laverdad.PNG';
-import paris0305 from '../../assets/images/events/paris0305.jpeg'
+// import paris0305 from '../../assets/images/events/paris0305.jpeg'
 import laverdadApril from '../../assets/images/events/laverdad-april-8.JPG';
 import vatcheMarch from '../../assets/images/events/vatche-march-25.PNG';
 import paris0430 from '../../assets/images/events/paris0430.JPEG'
@@ -16,15 +16,15 @@ const now = new Date();
 
 // 🔹 Original Events Array
 const eventsMock = [
-  {
-    id: uuid(),
-    title: 'Paris Chansons',
-    description:
-      'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
-    date: { day: '29', month: 'Jan', year: '2026' },
-    imgUrl: events1,
-    isRecurring: false,
-  },
+  // {
+  //   id: uuid(),
+  //   title: 'Paris Chansons',
+  //   description:
+  //     'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
+  //   date: { day: '29', month: 'Jan', year: '2026' },
+  //   imgUrl: events1,
+  //   isRecurring: false,
+  // },
   {
     id: uuid(),
     title: 'Tyom',
@@ -74,15 +74,15 @@ const eventsMock = [
     imgUrl: laverdadfeb19,
     isRecurring: false,
   },
-  {
-    id: uuid(),
-    title: 'Paris Chansons',
-    description:
-        'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
-    date: { day: '05', month: 'March', year: '2026' },
-    imgUrl: paris0305,
-    isRecurring: false,
-  },
+  // {
+  //   id: uuid(),
+  //   title: 'Paris Chansons',
+  //   description:
+  //       'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
+  //   date: { day: '05', month: 'March', year: '2026' },
+  //   imgUrl: paris0305,
+  //   isRecurring: false,
+  // },
   {
     id: uuid(),
     title: 'LA VERDAD',
