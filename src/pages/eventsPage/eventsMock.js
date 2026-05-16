@@ -27,7 +27,7 @@ const eventsMock = [
   },
   {
     id: uuid(),
-    title: 'Fiona ma',
+    title: 'Fiona Ma',
     description: 'Please join us for a special reception to support. FOR LT. GOVERNOR 2026',
     date: { day: '28', month: 'May', year: '2026' },
     imgUrl: fionamay28,
