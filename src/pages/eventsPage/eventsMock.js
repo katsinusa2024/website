@@ -4,8 +4,8 @@ import eventt from '../../assets/images/events/eventt.jpg';
 import eventAll from '../../assets/images/events/eventAll.jpg';
 import fionamay28 from '../../assets/images/events/fionamay28.png';
 import parisjune11 from '../../assets/images/events/parisJune11.JPEG';
-import jun25 from '../../assets/images/events/jun25.jpeg';
 import june26 from '../../assets/images/events/june26.PNG';
+import jun30 from '../../assets/images/events/jun30.jpeg';
 import jul16 from '../../assets/images/events/jul16.JPEG';
 import jul23 from '../../assets/images/events/jul23.JPEG';
 
@@ -50,8 +50,8 @@ const eventsMock = [
     id: uuid(),
     title: 'Vatche',
     description: 'The Legendary Maestro of Mediterranean Music',
-    date: { day: '25', month: 'Jun', year: '2026' },
-    imgUrl: jun25,
+    date: { day: '30', month: 'Jun', year: '2026' },
+    imgUrl: jun30,
     isRecurring: false,
   },
   {
