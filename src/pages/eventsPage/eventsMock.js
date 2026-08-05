@@ -2,12 +2,12 @@ import { v4 as uuid } from 'uuid';
 
 import eventt from '../../assets/images/events/eventt.jpg';
 import eventAll from '../../assets/images/events/eventAll.jpg';
-import fionamay28 from '../../assets/images/events/fionamay28.png';
-import parisjune11 from '../../assets/images/events/parisJune11.JPEG';
-import june26 from '../../assets/images/events/june26.PNG';
-import jun30 from '../../assets/images/events/jun30.jpeg';
-import jul16 from '../../assets/images/events/jul16.JPEG';
-import jul23 from '../../assets/images/events/jul23.JPEG';
+import aug202 from '../../assets/images/events/salsa-oug20.png';
+import aug13 from '../../assets/images/events/paris-oug13.jpeg';
+// import june26 from '../../assets/images/events/june26.PNG';
+import aug27 from '../../assets/images/events/vatche-oug27.png';
+import aug20 from '../../assets/images/events/laverdat-oug20.png';
+// import jul23 from '../../assets/images/events/jul23.JPEG';
 
 const now = new Date();
 
@@ -31,10 +31,10 @@ const eventsMock = [
   },
   {
     id: uuid(),
-    title: 'Fiona Ma',
-    description: 'Please join us for a special reception to support. FOR LT. GOVERNOR 2026',
-    date: { day: '28', month: 'May', year: '2026' },
-    imgUrl: fionamay28,
+    title: 'SALSA & BACHATA',
+    description: 'LA VERDAD, DAISY MCMILLEN, DJ MARCO',
+    date: { day: '20', month: 'Aug', year: '2026' },
+    imgUrl: aug202,
     isRecurring: false,
   },
   {
@@ -42,42 +42,24 @@ const eventsMock = [
     title: 'Paris Chansons',
     description:
         'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
-    date: { day: '11', month: 'Jun', year: '2026' },
-    imgUrl: parisjune11,
+    date: { day: '13', month: 'Aug', year: '2026' },
+    imgUrl: aug13,
     isRecurring: false,
   },
   {
     id: uuid(),
-    title: 'Vatche',
+    title: 'Vatche & His Band',
     description: 'The Legendary Maestro of Mediterranean Music',
-    date: { day: '30', month: 'Jun', year: '2026' },
-    imgUrl: jun30,
-    isRecurring: false,
-  },
-  {
-    id: uuid(),
-    title: 'WORLD CUP 2026',
-    description: 'WATCH PARTY\n' +
-        'LIVE ON THE BIG SCREENS AT KATSIN',
-    date: { day: '26', month: 'Jun', year: '2026' },
-    imgUrl: june26,
+    date: { day: '27', month: 'Aug', year: '2026' },
+    imgUrl: aug27,
     isRecurring: false,
   },
   {
     id: uuid(),
     title: 'LA VERDAD',
-    description: 'Free Event',
-    date: { day: '16', month: 'Jul', year: '2026' },
-    imgUrl: jul16,
-    isRecurring: false,
-  },
-  {
-    id: uuid(),
-    title: 'FRENCH MUSIC',
-    description: 'Aznavour, Macias, Dassin,\n' +
-        'Piaf, Zaz, Dalida, Adamo and more plus beloved Italian and Russian gypsy classics',
-    date: { day: '23', month: 'Jul', year: '2026' },
-    imgUrl: jul23,
+    description: 'Latin Soul & Salsa',
+    date: { day: '20', month: 'Aug', year: '2026' },
+    imgUrl: aug20,
     isRecurring: false,
   },
 ];
