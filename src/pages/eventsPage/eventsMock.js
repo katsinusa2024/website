@@ -8,6 +8,7 @@ import aug13 from '../../assets/images/events/paris-oug13.jpeg';
 import aug27 from '../../assets/images/events/vatche-oug27.png';
 import aug20 from '../../assets/images/events/laverdat-oug20.png';
 // import jul23 from '../../assets/images/events/jul23.JPEG';
+import sep24 from '../../assets/images/events/greek-sep24.JPEG';
 
 const now = new Date();
 
@@ -60,6 +61,14 @@ const eventsMock = [
     description: 'Latin Soul & Salsa',
     date: { day: '20', month: 'Aug', year: '2026' },
     imgUrl: aug20,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'GREEK NIGHT',
+    description: 'Live Greek Music, Fine Dining, AUTHENTIC EXPERIENCE',
+    date: { day: '24', month: 'Sep', year: '2026' },
+    imgUrl: sep24,
     isRecurring: false,
   },
 ];
