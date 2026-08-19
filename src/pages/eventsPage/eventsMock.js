@@ -9,6 +9,8 @@ import aug27 from '../../assets/images/events/vatche-oug27.png';
 import aug20 from '../../assets/images/events/laverdat-oug20.png';
 // import jul23 from '../../assets/images/events/jul23.JPEG';
 import sep24 from '../../assets/images/events/greek-sep24.JPEG';
+import sep10 from '../../assets/images/events/paris-sep-10.jpg';
+import sep29 from '../../assets/images/events/jack-sep-12.jpeg';
 
 const now = new Date();
 
@@ -69,6 +71,23 @@ const eventsMock = [
     description: 'Live Greek Music, Fine Dining, AUTHENTIC EXPERIENCE',
     date: { day: '24', month: 'Sep', year: '2026' },
     imgUrl: sep24,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'Paris Chansons',
+    description:
+        'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
+    date: { day: '10', month: 'Sep', year: '2026' },
+    imgUrl: sep10,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'Jack Jr',
+    description: 'Jack Assadourian is a comedian of Armenian and Mexican descent who has gained popularity for his unique perspective and hilarious observations on life.',
+    date: { day: '29', month: 'Sep', year: '2026' },
+    imgUrl: sep29,
     isRecurring: false,
   },
 ];
