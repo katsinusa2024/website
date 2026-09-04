@@ -5,12 +5,13 @@ import eventAll from '../../assets/images/events/eventAll.jpg';
 import aug202 from '../../assets/images/events/salsa-oug20.png';
 import aug13 from '../../assets/images/events/paris-oug13.jpeg';
 // import june26 from '../../assets/images/events/june26.PNG';
-import aug27 from '../../assets/images/events/vatche-oug27.png';
+// import aug27 from '../../assets/images/events/vatche-oug27.png';
 import aug20 from '../../assets/images/events/laverdat-oug20.png';
 // import jul23 from '../../assets/images/events/jul23.JPEG';
 import sep24 from '../../assets/images/events/greek-sep24.JPEG';
 import sep10 from '../../assets/images/events/paris-sep-10.jpg';
 import sep29 from '../../assets/images/events/jack-sep-12.jpeg';
+import sep17 from '../../assets/images/events/vatche-sep17.JPEG';
 
 const now = new Date();
 
@@ -53,8 +54,8 @@ const eventsMock = [
     id: uuid(),
     title: 'Vatche & His Band',
     description: 'The Legendary Maestro of Mediterranean Music',
-    date: { day: '27', month: 'Aug', year: '2026' },
-    imgUrl: aug27,
+    date: { day: '17', month: 'Sep', year: '2026' },
+    imgUrl: sep17,
     isRecurring: false,
   },
   {
