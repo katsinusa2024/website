@@ -2,12 +2,6 @@ import { v4 as uuid } from 'uuid';
 
 import eventt from '../../assets/images/events/eventt.jpg';
 import eventAll from '../../assets/images/events/eventAll.jpg';
-import aug202 from '../../assets/images/events/salsa-oug20.png';
-import aug13 from '../../assets/images/events/paris-oug13.jpeg';
-// import june26 from '../../assets/images/events/june26.PNG';
-// import aug27 from '../../assets/images/events/vatche-oug27.png';
-import aug20 from '../../assets/images/events/laverdat-oug20.png';
-// import jul23 from '../../assets/images/events/jul23.JPEG';
 import sep24 from '../../assets/images/events/greek-sep24.JPEG';
 import sep10 from '../../assets/images/events/paris-sep-10.jpg';
 import sep29 from '../../assets/images/events/jack-sep-12.jpeg';
@@ -35,36 +29,12 @@ const eventsMock = [
   },
   {
     id: uuid(),
-    title: 'SALSA & BACHATA',
-    description: 'LA VERDAD, DAISY MCMILLEN, DJ MARCO',
-    date: { day: '20', month: 'Aug', year: '2026' },
-    imgUrl: aug202,
-    isRecurring: false,
-  },
-  {
-    id: uuid(),
-    title: 'Paris Chansons',
-    description:
-        'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
-    date: { day: '13', month: 'Aug', year: '2026' },
-    imgUrl: aug13,
-    isRecurring: false,
-  },
-  {
-    id: uuid(),
     title: 'Vatche & His Band',
     description: 'The Legendary Maestro of Mediterranean Music',
     date: { day: '17', month: 'Sep', year: '2026' },
     imgUrl: sep17,
     isRecurring: false,
-  },
-  {
-    id: uuid(),
-    title: 'LA VERDAD',
-    description: 'Latin Soul & Salsa',
-    date: { day: '20', month: 'Aug', year: '2026' },
-    imgUrl: aug20,
-    isRecurring: false,
+    eventUrl: "https://www.opentable.com/booking/experiences-availability?rid=1323949&restref=1323949&experienceId=793227&utm_source=external&utm_medium=referral&utm_campaign=shared"
   },
   {
     id: uuid(),
@@ -73,6 +43,7 @@ const eventsMock = [
     date: { day: '24', month: 'Sep', year: '2026' },
     imgUrl: sep24,
     isRecurring: false,
+    eventUrl: "https://www.opentable.com/booking/experiences-availability?rid=1323949&restref=1323949&experienceId=778335&utm_source=external&utm_medium=referral&utm_campaign=shared"
   },
   {
     id: uuid(),
@@ -82,6 +53,7 @@ const eventsMock = [
     date: { day: '10', month: 'Sep', year: '2026' },
     imgUrl: sep10,
     isRecurring: false,
+    eventUrl: "https://www.opentable.com/booking/experiences-availability?rid=1323949&restref=1323949&experienceId=785193&utm_source=external&utm_medium=referral&utm_campaign=shared"
   },
   {
     id: uuid(),
@@ -90,6 +62,7 @@ const eventsMock = [
     date: { day: '29', month: 'Sep', year: '2026' },
     imgUrl: sep29,
     isRecurring: false,
+    eventUrl: "https://www.tixr.com/groups/jackjrcomic/events/jack-jr-at-katsin-in-glendale-september-29th-202884"
   },
 ];
 

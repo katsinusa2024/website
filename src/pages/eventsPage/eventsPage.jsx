@@ -4,11 +4,18 @@ import Button from '../../components/button';
 import { pastEventsMock, upcomingEventsMock } from './eventsMock';
 
 const EventsPage = () => {
-  const handleClick = () => {
-    window.open(
-      'https://www.opentable.com/restref/client/?restref=1323949&lang=en-US&ot_source=Restaurant%20website&corrid=e66c4cc3-0cde-4670-8a9b-dadfa75f931b',
-      '_blank',
-    );
+  const handleClick = (props) => {
+      if(!!props) {
+          window.open(
+              `${props}`,
+              '_blank',
+          );
+      }else{
+          window.open(
+              'https://www.opentable.com/restref/client/?restref=1323949&lang=en-US&ot_source=Restaurant%20website&corrid=e66c4cc3-0cde-4670-8a9b-dadfa75f931b',
+              '_blank',
+          );
+      }
   };
 
   const renderEvent = item => (
@@ -42,7 +49,7 @@ const EventsPage = () => {
       </div>
 
       <div className="col-12 col-md-2 mt-3 mt-md-0">
-        <Button onClick={handleClick} className="ms-md-auto d-flex">
+        <Button onClick={() => handleClick(item.eventUrl)} className="ms-md-auto d-flex">
           Book now
         </Button>
       </div>
