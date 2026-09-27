@@ -6,6 +6,9 @@ import sep24 from '../../assets/images/events/greek-sep24.JPEG';
 import sep10 from '../../assets/images/events/paris-sep-10.jpg';
 import sep29 from '../../assets/images/events/jack-sep-12.jpeg';
 import sep17 from '../../assets/images/events/vatche-sep17.JPEG';
+import oct8 from '../../assets/images/events/laverdad-oct8.png';
+import oct15 from '../../assets/images/events/greek-oct15.jpeg';
+import oct29 from '../../assets/images/events/paris-oct29.jpeg';
 
 const now = new Date();
 
@@ -63,6 +66,31 @@ const eventsMock = [
     imgUrl: sep29,
     isRecurring: false,
     eventUrl: "https://www.tixr.com/groups/jackjrcomic/events/jack-jr-at-katsin-in-glendale-september-29th-202884"
+  },
+  {
+    id: uuid(),
+    title: 'Paris Chansons',
+    description:
+        'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
+    date: { day: '29', month: 'Oct', year: '2026' },
+    imgUrl: oct29,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'GREEK NIGHT',
+    description: 'Live Greek Music, Fine Dining, AUTHENTIC EXPERIENCE',
+    date: { day: '15', month: 'Oct', year: '2026' },
+    imgUrl: oct15,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'LA VERDAD',
+    description: 'Fine Dining, Live Music',
+    date: { day: '08', month: 'Oct', year: '2026' },
+    imgUrl: oct8,
+    isRecurring: false,
   },
 ];
 
