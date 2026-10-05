@@ -9,6 +9,7 @@ import sep17 from '../../assets/images/events/vatche-sep17.JPEG';
 import oct8 from '../../assets/images/events/laverdad-oct8.png';
 import oct15 from '../../assets/images/events/greek-oct15.jpeg';
 import oct29 from '../../assets/images/events/paris-oct29.jpeg';
+import oct13 from '../../assets/images/events/grisha-oct13.JPEG';
 
 const now = new Date();
 
@@ -91,6 +92,15 @@ const eventsMock = [
     date: { day: '08', month: 'Oct', year: '2026' },
     imgUrl: oct8,
     isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'Grisha Aghakhanyan',
+    description: 'Performing TOP 10 OF RABIZ Live',
+    date: { day: '13', month: 'Oct', year: '2026' },
+    imgUrl: oct13,
+    isRecurring: false,
+    eventUrl: "https://www.opentable.com/booking/experiences-availability?rid=1323949&restref=1323949&experienceId=818681&utm_source=external&utm_medium=referral&utm_campaign=shared"
   },
 ];
 
