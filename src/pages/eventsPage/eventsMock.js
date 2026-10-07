@@ -2,14 +2,15 @@ import { v4 as uuid } from 'uuid';
 
 import eventt from '../../assets/images/events/eventt.jpg';
 import eventAll from '../../assets/images/events/eventAll.jpg';
-import sep24 from '../../assets/images/events/greek-sep24.JPEG';
-import sep10 from '../../assets/images/events/paris-sep-10.jpg';
-import sep29 from '../../assets/images/events/jack-sep-12.jpeg';
-import sep17 from '../../assets/images/events/vatche-sep17.JPEG';
-import oct8 from '../../assets/images/events/laverdad-oct8.png';
+// import sep24 from '../../assets/images/events/greek-sep24.JPEG';
+// import sep10 from '../../assets/images/events/paris-sep-10.jpg';
+// import sep29 from '../../assets/images/events/jack-sep-12.jpeg';
+// import sep17 from '../../assets/images/events/vatche-sep17.JPEG';
+// import oct8 from '../../assets/images/events/laverdad-oct8.png';
 import oct15 from '../../assets/images/events/greek-oct15.jpeg';
 import oct29 from '../../assets/images/events/paris-oct29.jpeg';
 import oct13 from '../../assets/images/events/grisha-oct13.JPEG';
+import nov10 from '../../assets/images/events/jack-nov10.png';
 
 const now = new Date();
 
@@ -31,43 +32,43 @@ const eventsMock = [
     imgUrl: eventAll,
     isRecurring: true,
   },
-  {
-    id: uuid(),
-    title: 'Vatche & His Band',
-    description: 'The Legendary Maestro of Mediterranean Music',
-    date: { day: '17', month: 'Sep', year: '2026' },
-    imgUrl: sep17,
-    isRecurring: false,
-    eventUrl: "https://www.opentable.com/booking/experiences-availability?rid=1323949&restref=1323949&experienceId=793227&utm_source=external&utm_medium=referral&utm_campaign=shared"
-  },
-  {
-    id: uuid(),
-    title: 'GREEK NIGHT',
-    description: 'Live Greek Music, Fine Dining, AUTHENTIC EXPERIENCE',
-    date: { day: '24', month: 'Sep', year: '2026' },
-    imgUrl: sep24,
-    isRecurring: false,
-    eventUrl: "https://www.opentable.com/booking/experiences-availability?rid=1323949&restref=1323949&experienceId=778335&utm_source=external&utm_medium=referral&utm_campaign=shared"
-  },
-  {
-    id: uuid(),
-    title: 'Paris Chansons',
-    description:
-        'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
-    date: { day: '10', month: 'Sep', year: '2026' },
-    imgUrl: sep10,
-    isRecurring: false,
-    eventUrl: "https://www.opentable.com/booking/experiences-availability?rid=1323949&restref=1323949&experienceId=785193&utm_source=external&utm_medium=referral&utm_campaign=shared"
-  },
-  {
-    id: uuid(),
-    title: 'Jack Jr',
-    description: 'Jack Assadourian is a comedian of Armenian and Mexican descent who has gained popularity for his unique perspective and hilarious observations on life.',
-    date: { day: '29', month: 'Sep', year: '2026' },
-    imgUrl: sep29,
-    isRecurring: false,
-    eventUrl: "https://www.tixr.com/groups/jackjrcomic/events/jack-jr-at-katsin-in-glendale-september-29th-202884"
-  },
+  // {
+  //   id: uuid(),
+  //   title: 'Vatche & His Band',
+  //   description: 'The Legendary Maestro of Mediterranean Music',
+  //   date: { day: '17', month: 'Sep', year: '2026' },
+  //   imgUrl: sep17,
+  //   isRecurring: false,
+  //   eventUrl: "https://www.opentable.com/booking/experiences-availability?rid=1323949&restref=1323949&experienceId=793227&utm_source=external&utm_medium=referral&utm_campaign=shared"
+  // },
+  // {
+  //   id: uuid(),
+  //   title: 'GREEK NIGHT',
+  //   description: 'Live Greek Music, Fine Dining, AUTHENTIC EXPERIENCE',
+  //   date: { day: '24', month: 'Sep', year: '2026' },
+  //   imgUrl: sep24,
+  //   isRecurring: false,
+  //   eventUrl: "https://www.opentable.com/booking/experiences-availability?rid=1323949&restref=1323949&experienceId=778335&utm_source=external&utm_medium=referral&utm_campaign=shared"
+  // },
+  // {
+  //   id: uuid(),
+  //   title: 'Paris Chansons',
+  //   description:
+  //       'A Beautiful Journey Through French Music Featuring Aznavour, Macias, Dassin, Piaf, Zaz, Dalida, Adamo, and more — plus beloved Italian and Russian gypsy classics.',
+  //   date: { day: '10', month: 'Sep', year: '2026' },
+  //   imgUrl: sep10,
+  //   isRecurring: false,
+  //   eventUrl: "https://www.opentable.com/booking/experiences-availability?rid=1323949&restref=1323949&experienceId=785193&utm_source=external&utm_medium=referral&utm_campaign=shared"
+  // },
+  // {
+  //   id: uuid(),
+  //   title: 'Jack Jr',
+  //   description: 'Jack Assadourian is a comedian of Armenian and Mexican descent who has gained popularity for his unique perspective and hilarious observations on life.',
+  //   date: { day: '29', month: 'Sep', year: '2026' },
+  //   imgUrl: sep29,
+  //   isRecurring: false,
+  //   eventUrl: "https://www.tixr.com/groups/jackjrcomic/events/jack-jr-at-katsin-in-glendale-september-29th-202884"
+  // },
   {
     id: uuid(),
     title: 'Paris Chansons',
@@ -85,14 +86,14 @@ const eventsMock = [
     imgUrl: oct15,
     isRecurring: false,
   },
-  {
-    id: uuid(),
-    title: 'LA VERDAD',
-    description: 'Fine Dining, Live Music',
-    date: { day: '08', month: 'Oct', year: '2026' },
-    imgUrl: oct8,
-    isRecurring: false,
-  },
+  // {
+  //   id: uuid(),
+  //   title: 'LA VERDAD',
+  //   description: 'Fine Dining, Live Music',
+  //   date: { day: '08', month: 'Oct', year: '2026' },
+  //   imgUrl: oct8,
+  //   isRecurring: false,
+  // },
   {
     id: uuid(),
     title: 'Grisha Aghakhanyan',
@@ -101,6 +102,14 @@ const eventsMock = [
     imgUrl: oct13,
     isRecurring: false,
     eventUrl: "https://www.opentable.com/booking/experiences-availability?rid=1323949&restref=1323949&experienceId=818681&utm_source=external&utm_medium=referral&utm_campaign=shared"
+  },
+  {
+    id: uuid(),
+    title: 'Jack Jr',
+    description: 'Jack Assadourian is a comedian of Armenian and Mexican descent who has gained popularity for his unique perspective and hilarious observations on life.',
+    date: { day: '10', month: 'Nov', year: '2026' },
+    imgUrl: nov10,
+    isRecurring: false,
   },
 ];
 
