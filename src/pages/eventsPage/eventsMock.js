@@ -8,6 +8,7 @@ import eventAll from '../../assets/images/events/eventAll.jpg';
 // import sep17 from '../../assets/images/events/vatche-sep17.JPEG';
 // import oct8 from '../../assets/images/events/laverdad-oct8.png';
 import oct15 from '../../assets/images/events/greek-oct15.jpeg';
+import oct22 from '../../assets/images/events/kami-oct22.jpeg';
 import oct29 from '../../assets/images/events/paris-oct29.jpeg';
 import oct13 from '../../assets/images/events/grisha-oct13.JPEG';
 import nov10 from '../../assets/images/events/jack-nov10.png';
@@ -102,6 +103,14 @@ const eventsMock = [
     imgUrl: oct13,
     isRecurring: false,
     eventUrl: "https://www.opentable.com/booking/experiences-availability?rid=1323949&restref=1323949&experienceId=818681&utm_source=external&utm_medium=referral&utm_campaign=shared"
+  },
+  {
+    id: uuid(),
+    title: 'KAMI FRIENDS',
+    description: '',
+    date: { day: '22', month: 'Oct', year: '2026' },
+    imgUrl: oct22,
+    isRecurring: false,
   },
   {
     id: uuid(),
