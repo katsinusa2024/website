@@ -7,11 +7,13 @@ import eventAll from '../../assets/images/events/eventAll.jpg';
 // import sep29 from '../../assets/images/events/jack-sep-12.jpeg';
 // import sep17 from '../../assets/images/events/vatche-sep17.JPEG';
 // import oct8 from '../../assets/images/events/laverdad-oct8.png';
-import oct15 from '../../assets/images/events/greek-oct15.jpeg';
+// import oct15 from '../../assets/images/events/greek-oct15.jpeg';
 import oct22 from '../../assets/images/events/kami-oct22.jpeg';
 import oct29 from '../../assets/images/events/paris-oct29.jpeg';
 import oct13 from '../../assets/images/events/grisha-oct13.JPEG';
 import nov10 from '../../assets/images/events/jack-nov10.png';
+import nov5 from '../../assets/images/events/vatche-nov5.png';
+import nov19 from '../../assets/images/events/greeknight-nov19.png';
 
 const now = new Date();
 
@@ -79,14 +81,14 @@ const eventsMock = [
     imgUrl: oct29,
     isRecurring: false,
   },
-  {
-    id: uuid(),
-    title: 'GREEK NIGHT',
-    description: 'Live Greek Music, Fine Dining, AUTHENTIC EXPERIENCE',
-    date: { day: '15', month: 'Oct', year: '2026' },
-    imgUrl: oct15,
-    isRecurring: false,
-  },
+  // {
+  //   id: uuid(),
+  //   title: 'GREEK NIGHT',
+  //   description: 'Live Greek Music, Fine Dining, AUTHENTIC EXPERIENCE',
+  //   date: { day: '15', month: 'Oct', year: '2026' },
+  //   imgUrl: oct15,
+  //   isRecurring: false,
+  // },
   // {
   //   id: uuid(),
   //   title: 'LA VERDAD',
@@ -107,7 +109,7 @@ const eventsMock = [
   {
     id: uuid(),
     title: 'KAMI FRIENDS',
-    description: '',
+    description: 'LIVE MUSIC, FINE DINING, MEDITERRANEAN EXPERIENCE',
     date: { day: '22', month: 'Oct', year: '2026' },
     imgUrl: oct22,
     isRecurring: false,
@@ -118,6 +120,22 @@ const eventsMock = [
     description: 'Jack Assadourian is a comedian of Armenian and Mexican descent who has gained popularity for his unique perspective and hilarious observations on life.',
     date: { day: '10', month: 'Nov', year: '2026' },
     imgUrl: nov10,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'GREEK NIGHT',
+    description: 'Live Greek Music, Fine Dining, AUTHENTIC EXPERIENCE',
+    date: { day: '19', month: 'Nov', year: '2026' },
+    imgUrl: nov19,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'Vatche & His Band',
+    description: 'The Legendary Maestro of Mediterranean Music',
+    date: { day: '5', month: 'Nov', year: '2026' },
+    imgUrl: nov5,
     isRecurring: false,
   },
 ];
