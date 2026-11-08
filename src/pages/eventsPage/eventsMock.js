@@ -14,6 +14,8 @@ import oct13 from '../../assets/images/events/grisha-oct13.JPEG';
 import nov10 from '../../assets/images/events/jack-nov10.png';
 import nov5 from '../../assets/images/events/vatche-nov5.png';
 import nov19 from '../../assets/images/events/greeknight-nov19.png';
+import nov12 from '../../assets/images/events/mediterenian-nov12.PNG';
+import dec31 from '../../assets/images/events/marjana-dec31.PNG';
 
 const now = new Date();
 
@@ -136,6 +138,22 @@ const eventsMock = [
     description: 'The Legendary Maestro of Mediterranean Music',
     date: { day: '5', month: 'Nov', year: '2026' },
     imgUrl: nov5,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'MARJANA, TUYN PROJECT & DJ',
+    description: 'NEW YEAR EVE AT KATSIN',
+    date: {day: '31', month: 'Dec', year: '2026'}, // not needed for template
+    imgUrl: dec31,
+    isRecurring: false,
+  },
+  {
+    id: uuid(),
+    title: 'MEDITERRANEAN',
+    description: 'DANCING, MEDITERRANEAN EXPERIENCE, FINE DINING',
+    date: {day: '12', month: 'Nov', year: '2026'}, // not needed for template
+    imgUrl: nov12,
     isRecurring: false,
   },
 ];
